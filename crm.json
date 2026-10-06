@@ -1,0 +1,1369 @@
+{
+ "layer": "crm",
+ "title": "CRM Training Guide",
+ "intro": "Step-by-step GoHighLevel training. New team members can work through the lessons in order; experienced users can search for a specific task.",
+ "sections": [
+  {
+   "name": "Core CRM",
+   "blurb": "The main areas of the CRM you will use every day."
+  },
+  {
+   "name": "Settings & Configuration",
+   "blurb": "Set up your profile, calendars and data fields."
+  },
+  {
+   "name": "Additional Tools",
+   "blurb": "Apps and reporting beyond the core workspace."
+  }
+ ],
+ "lessons": [
+  {
+   "id": "crm-01",
+   "slug": "navigate-the-launchpad",
+   "title": "Navigating the Launchpad",
+   "category": "Core CRM",
+   "order": 1,
+   "description": "Use the Launchpad setup guide to see which core GoHighLevel features are set up in your account, which still need attention, and where to find built-in tutorials.",
+   "videoUrl": "videos/01.mp4",
+   "videoDuration": "1:23",
+   "whatYouWillLearn": [
+    "Open the Launchpad from the left sidebar",
+    "Read the setup progress bar and task completion percentages",
+    "Switch between the setup categories",
+    "Expand a setup task and open its tutorial video"
+   ],
+   "sop": [
+    {
+     "heading": "Open the Launchpad",
+     "steps": [
+      "In the left sidebar, click **Launchpad**.",
+      "Review the **Setup Guide**. The progress bar at the top shows how much of the selected category is complete."
+     ]
+    },
+    {
+     "heading": "Review setup tasks",
+     "steps": [
+      "Click **Foundational setup** to see the core tasks, such as **Create a new contact**, **Import and engage with all your contacts instantly** and **Generate new leads with a high-converting funnel**.",
+      "Check the percentage beside each task. A green check with **100%** means the task is complete; **0%** means it has not been started.",
+      "Click the arrow on the right of a task to expand it. Where a video is available, play it under **Watch the Tutorial**.",
+      "Scroll down to see the remaining tasks in the category, such as **Book more appointments with automated scheduling** and **Accelerate deal closures with a streamlined sales pipeline**."
+     ]
+    },
+    {
+     "heading": "Switch categories",
+     "steps": [
+      "Click each category in the **Setup Guide** menu to view its tasks: **Marketing & lead generation**, **Sales & conversations**, **Website & monetization** and **Ecommerce**.",
+      "Note the progress bar updates to show completion for the selected category."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "Not every Launchpad task is required. Use it to confirm the key items are connected and to see what GoHighLevel can do, rather than completing every item."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/01-1.jpg",
+     "afterStep": 5,
+     "caption": "Foundational setup tasks with completion percentages and an expanded task showing Watch the Tutorial."
+    }
+   ],
+   "searchTerms": [
+    "open launchpad",
+    "what is the launchpad",
+    "setup guide progress",
+    "check account setup",
+    "foundational setup tasks",
+    "launchpad tutorial videos",
+    "what do i need to set up",
+    "marketing and lead generation setup",
+    "sales and conversations setup",
+    "website and monetization setup",
+    "setup checklist"
+   ],
+   "status": "active",
+   "source": "Go High Level Launch Pad.mp4"
+  },
+  {
+   "id": "crm-02",
+   "slug": "understand-the-dashboard",
+   "title": "Understanding the Dashboard",
+   "category": "Core CRM",
+   "order": 2,
+   "description": "Switch between dashboards, read the default GoHighLevel dashboard widgets, customize a dashboard and change the reporting date range.",
+   "videoUrl": "videos/02.mp4",
+   "videoDuration": "5:27",
+   "whatYouWillLearn": [
+    "Switch between the default dashboard and custom dashboards",
+    "Read the opportunity, conversion, funnel, task and reporting widgets",
+    "Recognize why a widget may show no data or a connection error",
+    "Add, resize, duplicate or delete widgets in edit mode",
+    "Change the date range and compare against a previous period"
+   ],
+   "sop": [
+    {
+     "heading": "Switch dashboards",
+     "steps": [
+      "In the left sidebar, click **Dashboard**.",
+      "Click the dashboard selector at the top left (it shows the current dashboard name, for example **Dashboard**) and choose a dashboard from the **Shared with me** list. Use **Search for a dashboard** if the list is long.",
+      "To start a new dashboard, click **New** next to the selector."
+     ]
+    },
+    {
+     "heading": "Read the default dashboard",
+     "steps": [
+      "**Opportunity status** shows how your opportunities are distributed across open, won and lost. Use the **All pipelines** drop-down on the widget to filter by pipeline.",
+      "**Opportunity value** shows **Total revenue**, and **Conversion rate** shows the win rate with **Won revenue** below it.",
+      "**Funnel** and **Stages distribution** show how opportunities are spread across stages. Select the pipeline from the drop-down on each widget.",
+      "**Tasks** lists tasks you can filter by status (**Pending**), sort order (**Due date (ASC)**) and user. **Manual actions** shows pending **Phone** and **SMS** actions; click **Go to manual actions** to work them.",
+      "Scroll down for **Lead source report**, **Google Business Profile**, **Facebook Ads report**, **Google Ads report**, **Email health report**, **Google Analytics count**, **Google Analytics chart** and **Sales efficiency**."
+     ]
+    },
+    {
+     "heading": "Review a custom dashboard",
+     "steps": [
+      "Open the dashboard selector and choose a custom dashboard built for your account.",
+      "Scroll through its sections. In the example shown, widgets are grouped under **Top of Funnel**, **Consults & Show Rate**, **Conversion & Revenue** and **Health**."
+     ]
+    },
+    {
+     "heading": "Customize a dashboard",
+     "steps": [
+      "Click **Edit dashboard**. The dashboard enters **Edit mode** and the **Add new widget** panel opens with the **Widgets**, **Elements**, **Themes** and **Custom metrics** tabs.",
+      "Find a widget with **Search widgets**, filter by **Chart type**, or expand a category such as **Contacts**, **Opportunities** or **Calls**.",
+      "Drag the bottom-right corner of a card to resize it, or drag a card to move it.",
+      "To remove a widget you do not use, click the three-dot icon next to its title and select **Delete**. The same menu offers **Edit** and **Duplicate**.",
+      "Click **Save changes** to keep your edits, or **Cancel** to discard them."
+     ]
+    },
+    {
+     "heading": "Change the date range",
+     "steps": [
+      "Click the date range button at the top right (default **Last 30 days**).",
+      "Choose a preset under **Select date range**, or click a start and end date on the calendar to set **From** and **To**.",
+      "To compare periods, open **Comparison date range** and choose an option such as **Previous 31 days** or **Year before** (default **No comparison**).",
+      "Click **Apply**. The button then shows the selected date range."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "Revenue, won value and conversion widgets only populate when opportunities are updated to won or lost with a monetary value. If numbers look wrong, check how opportunities are being updated.",
+    "If **Funnel** or **Stages distribution** shows **Funnel is disabled for this pipeline**, the pipeline must be enabled for these charts in Opportunities.",
+    "Reports showing **Connection expired. Reconnect to continue.** need their integration (Google Analytics, Facebook Ads, Google Ads) reconnected before data appears. **Email health report** requires at least 500 emails sent in the last 30 days."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/02-1.jpg",
+     "afterStep": 2,
+     "caption": "Dashboard selector open, showing the search box and the dashboards available under Shared with me."
+    },
+    {
+     "src": "shots/02-2.jpg",
+     "afterStep": 14,
+     "caption": "Edit mode: the widget three-dot menu (Edit, Duplicate, Delete) and the Add new widget panel."
+    },
+    {
+     "src": "shots/02-3.jpg",
+     "afterStep": 18,
+     "caption": "Date range picker with Select date range, From and To, and the Comparison date range options."
+    }
+   ],
+   "searchTerms": [
+    "switch dashboard",
+    "change dashboard view",
+    "create new dashboard",
+    "edit dashboard",
+    "add widget to dashboard",
+    "delete dashboard widget",
+    "resize dashboard card",
+    "change dashboard date range",
+    "compare date ranges",
+    "opportunity status chart",
+    "conversion rate on dashboard",
+    "why is dashboard not showing data",
+    "funnel is disabled for this pipeline",
+    "manual actions on dashboard"
+   ],
+   "status": "active",
+   "source": "GoHigh Level Dashboard.mp4"
+  },
+  {
+   "id": "crm-03",
+   "slug": "use-conversations",
+   "title": "Using Conversations",
+   "category": "Core CRM",
+   "order": 3,
+   "description": "Learn the layout of the Conversations tab so you can check unread messages, find and organize conversations, view contact details alongside a thread, and know what each Conversations sub-tab is for.",
+   "videoUrl": "videos/03.mp4",
+   "videoDuration": "4:22",
+   "whatYouWillLearn": [
+    "The three panels of the Conversations view",
+    "How to check, filter, and clear unread messages",
+    "How to star important conversations",
+    "How to switch between My inbox, Team inbox, and Internal chat and search conversations",
+    "What Manual Actions, Snippets, Trigger Links, Analytics, and Settings are used for"
+   ],
+   "sop": [
+    {
+     "heading": "Open Conversations",
+     "steps": [
+      "In the left menu, click **Conversations**. The **Conversations** sub-tab opens with three panels: the conversation list on the left, the message thread and history in the center, and the selected contact's details on the right."
+     ]
+    },
+    {
+     "heading": "Check and organize messages",
+     "steps": [
+      "Start on the **Unread** tab of the inbox to check for any unread messages.",
+      "After reading them, check **Select all** to select every conversation in the list and mark them as read.",
+      "Use the **All**, **Recent**, and **Starred** tabs to switch which conversations are listed.",
+      "To star a conversation you need to return to (for example, an important conversation or a client), check the box next to the contact's name and choose the star option from the dropdown that appears. Starred conversations appear under **Starred**."
+     ]
+    },
+    {
+     "heading": "Reply and view contact details",
+     "steps": [
+      "Click a conversation to open it in the center panel. Reply to texts and messages from this panel.",
+      "Use the icons on the right edge of the screen to open the contact's sections without leaving the conversation, including **Activity**, **Associations**, **Tasks**, and **Agent Logs**, as well as opportunities, notes, appointments, documents, and payments."
+     ]
+    },
+    {
+     "heading": "Switch inboxes and search",
+     "steps": [
+      "Use the icons to the left of the conversation list to switch between **My inbox**, **Team inbox**, and **Internal chat**. **Internal chat** is for messages between team members.",
+      "Click the expand arrow on the left edge of the conversation list to open the full inbox menu. Under **My inbox**, choose **All**, **Assigned to me**, or **Followed by me** to see conversations assigned to you or that you follow.",
+      "Type in the **Search** box at the top of that menu (minimum 3 characters) to find any conversation."
+     ]
+    },
+    {
+     "heading": "Other Conversations tabs",
+     "steps": [
+      "Click **Manual Actions** to see calls and SMS messages that a workflow has queued for you to complete manually. Filter with **Workflows**, **Select Workflow**, and **Select Assignee**, and click **Let's Start** to work through the queued actions.",
+      "Click **Snippets** to manage saved messages you can insert into a conversation, such as a reply to a common objection or an email with your business information. Click **New Snippet** to create one or **New Folder** to organize them.",
+      "Click **Trigger Links** to manage tracked links (for example, a link to your calendar) used inside SMS messages and emails. Each click on the link records data about the contact. Click **Add Link** to create one and use the **Analyze** tab to review clicks.",
+      "Click **Analytics** to view **SLA performance**, which tracks response times once SLA settings are turned on with **Turn on SLA settings**.",
+      "Click **Settings** to define response time targets under **SLA Settings** using **Set SLA**."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "Sending texts and emails, and the full detail of each contact section, are covered in the Contacts lesson."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/03-1.jpg",
+     "afterStep": 1,
+     "caption": "The Conversations view: inbox list with Unread, All, Recent, and Starred tabs on the left, the message panel in the center, and the contact details panel with section icons on the right."
+    },
+    {
+     "src": "shots/03-2.jpg",
+     "afterStep": 9,
+     "caption": "The expanded inbox menu with My inbox (All, Assigned to me, Followed by me), Team inbox, Internal chat, Views, and the Search box."
+    },
+    {
+     "src": "shots/03-3.jpg",
+     "afterStep": 12,
+     "caption": "The Snippets tab with the New Folder and New Snippet buttons."
+    }
+   ],
+   "searchTerms": [
+    "check unread messages",
+    "mark messages as read",
+    "star a conversation",
+    "find starred conversations",
+    "search conversations",
+    "see conversations assigned to me",
+    "switch to team inbox",
+    "internal chat with team",
+    "view contact details from conversation",
+    "create a snippet",
+    "saved message template",
+    "create a trigger link",
+    "manual actions queue",
+    "set response time SLA"
+   ],
+   "status": "active",
+   "source": "GoHighLevel Conversations.mp4"
+  },
+  {
+   "id": "crm-04",
+   "slug": "use-the-calendar",
+   "title": "Using the Calendar",
+   "category": "Core CRM",
+   "order": 4,
+   "description": "Learn how to view booked appointments by calendar or user, book an appointment correctly from the Calendars tab, and find where to connect your personal calendar.",
+   "videoUrl": "videos/04.mp4",
+   "videoDuration": "4:47",
+   "whatYouWillLearn": [
+    "How to filter the calendar by calendar and by user to see who is booked",
+    "How to open the Book appointment window",
+    "Why choosing the right calendar and team member matters",
+    "How timezones work when picking a slot and how to check the contact's local time",
+    "How to book a custom or recurring time",
+    "Where to set appointment status and where to connect your personal calendar"
+   ],
+   "sop": [
+    {
+     "heading": "View who is booked",
+     "steps": [
+      "In the left menu, click **Calendars**. The **Calendar view** tab opens with the **Manage view** panel on the right.",
+      "Under **Filters**, expand **Calendars** and check one or more calendars to see the appointments booked in them. This is useful when booking for someone else and checking availability.",
+      "Expand **Users** and check one or more users to show only the appointments booked for them."
+     ]
+    },
+    {
+     "heading": "Book an appointment",
+     "steps": [
+      "Click **New** at the top right, or click the time slot on the calendar where you want the meeting. The **Book appointment** window opens on the **Appointment** tab. The same window opens wherever you book a meeting in GoHighLevel, including from a contact.",
+      "Under **Calendar**, select the correct calendar first (for example, a discovery call, consultation, or personal calendar). Booking in the wrong calendar can send the contact the wrong automations, texts, and reminders, or book the wrong person.",
+      "**Appointment title** defaults to **{{contact.name}}**. Leave it as is or change it, and click **Add description** if you want to add details.",
+      "Under **Team member**, select the team member who will actually take the call.",
+      "Under **Date & time**, confirm the timezone shown under **Showing slots in this timezone: (Account timezone)** is correct. The slots listed are in this timezone, not the contact's.",
+      "On the **Default** tab, choose a **Date** and a **Slot** from the available intervals.",
+      "If the time you need is not listed, click **Custom** and set the **Start time** and **End time**. Check **Recurring event** if the meeting repeats.",
+      "Under **Select Contact**, search by name, email, or phone and select the contact. Check the contact's local time shown under their name to confirm the appointment time is correct for them.",
+      "At the bottom, set **Status** to **Confirmed** or **Unconfirmed**.",
+      "Click **Book appointment** to save the appointment."
+     ]
+    },
+    {
+     "heading": "Update status after the call",
+     "steps": [
+      "After the call, open the appointment and update its status if the contact did not show or the appointment was cancelled, so reporting reflects the correct outcome."
+     ]
+    },
+    {
+     "heading": "Connect your personal calendar",
+     "steps": [
+      "Click **Settings** at the bottom of the left menu, then click **My Profile**.",
+      "Click **Calendar**, and on the **Calendars** tab under **Connected calendars**, click **Add new** to connect Google Calendar or the calendar you use. Your appointments then show there and your busy times are blocked off."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "The timezone in the Book appointment window is your account timezone. Always compare against the contact's local time before booking. For example, a contact in Central time sees a 10:00 AM Eastern slot as 9:00 AM.",
+    "Connecting your calendar is covered step by step in a separate lesson."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/04-1.jpg",
+     "afterStep": 5,
+     "caption": "The Book appointment window: Calendar, Appointment title, Team member, and Date & time with the account timezone and Default and Custom tabs."
+    },
+    {
+     "src": "shots/04-2.jpg",
+     "afterStep": 11,
+     "caption": "After selecting a contact, the contact's local time appears under their name on the right."
+    },
+    {
+     "src": "shots/04-3.jpg",
+     "afterStep": 16,
+     "caption": "Settings, My Profile, Calendar: the Connected calendars section with the Add new button."
+    }
+   ],
+   "searchTerms": [
+    "book an appointment",
+    "create a meeting",
+    "see who is booked",
+    "filter calendar by user",
+    "filter calendar by calendar",
+    "choose the right calendar",
+    "assign team member to appointment",
+    "book a custom time",
+    "set up a recurring meeting",
+    "check contact local time",
+    "change appointment timezone",
+    "mark appointment confirmed",
+    "update appointment status no show",
+    "connect google calendar"
+   ],
+   "status": "active",
+   "source": "GHL Calendars.mp4"
+  },
+  {
+   "id": "crm-05",
+   "slug": "managing-contacts",
+   "title": "Managing Contacts",
+   "category": "Core CRM",
+   "order": 5,
+   "description": "Open a contact record and work it end to end: set ownership, review and update fields, manage Do Not Disturb, send messages, and log tasks, notes, and appointments from one screen.",
+   "videoUrl": "videos/05.mp4",
+   "videoDuration": "10:38",
+   "whatYouWillLearn": [
+    "Open a contact record and navigate its three panels",
+    "Assign an owner and add followers to a contact",
+    "Find and update contact, general, and custom fields",
+    "Turn Do Not Disturb on or off for all or individual channels",
+    "Review a contact's opportunities, workflows, and client portal access",
+    "Send an email or text with snippets, custom values, and scheduling options",
+    "Add tasks, notes, and appointments and review documents, payments, and agent logs"
+   ],
+   "sop": [
+    {
+     "heading": "Open a contact record",
+     "steps": [
+      "In the left sidebar, click **Contacts**. The **Smart Lists** tab opens and shows the contact list.",
+      "Click a contact's name to open **Contact Details**. The record has three areas: contact details on the left, **Conversations** in the middle, and a detail panel on the right that changes based on the icon you select in the icon bar on the far right."
+     ]
+    },
+    {
+     "heading": "Set owner and followers",
+     "steps": [
+      "Under **Owner**, click the dropdown (shows **Unassigned** when no one is assigned) and select the user responsible for the contact.",
+      "Under **Followers**, click the dropdown and add any user who is helping work the contact but is not the owner."
+     ]
+    },
+    {
+     "heading": "Review and update contact fields",
+     "steps": [
+      "Click the **All fields** tab. To find a specific field quickly, type in **Search fields and folders**.",
+      "Expand each folder to review or update values: **Contact** (**First name**, **Last name**, **Email**, **Phone**, **Date of birth**, **Contact source**, **Contact type**), **General Info** (**Business name**, **Street address**, **City**, **Country**, **State**, **Postal code**, **Website**, **Time zone**), and **Additional Info** (custom fields created for the account). Click into a field to edit its value."
+     ]
+    },
+    {
+     "heading": "Set Do Not Disturb (DND)",
+     "steps": [
+      "Click the **DND** tab. Check **DND All Channels** to block all channels, or check only the channels to block: **Email**, **Text Messages**, **Calls & voicemail**, or **Inbound Calls and SMS**.",
+      "To remove DND, uncheck the box for that channel or for **DND All Channels**."
+     ]
+    },
+    {
+     "heading": "Review Actions",
+     "steps": [
+      "Click the **Actions** tab. Under **Opportunities**, click **+ Add** to create a new opportunity, or click an existing opportunity card to open its edit window. Click **Load More** to see additional opportunities.",
+      "Expand **Workflows** to see the contact's **Active workflows** and **Past workflows**. Use this as an audit log to confirm which automations a contact has gone through.",
+      "Expand **Client portal** to view the contact's **Offers** and **Community groups**."
+     ]
+    },
+    {
+     "heading": "Send a message",
+     "steps": [
+      "In the **Conversations** area, click **Type a message** to open the composer, then select the channel from the dropdown at the top left of the composer (for example, **Email**). Available channels depend on the contact's details and the channels connected to the account.",
+      "Confirm the **From** address and **From Name** and change them if needed. For email, enter a **Subject**, then type your message. Text messages have no subject line.",
+      "Use the toolbar at the bottom of the composer as needed: text formatting, emoji, **Insert Link**, file attachment, **Snippets**, trigger links, **Custom Values** (for example, **Contact** > **Full Name** inserts {{contact.name}}), **Request Payment**, and image. Click the trash icon to clear the message.",
+      "Click the arrow next to the send button and choose **Send**, **Send Later**, or **AI Schedule**."
+     ]
+    },
+    {
+     "heading": "Use the right-side panel",
+     "steps": [
+      "Click the **Activity** icon to see page visits, form submissions, appointments, and calls for the contact. Review this before calling so you know the contact's recent actions.",
+      "Click the **Associations** icon. Under **Companies**, click **Create new** or **Link existing** to connect the contact to a company record.",
+      "Click the **Opportunities** icon to see the contact's opportunities and their pipeline stages, or click **+ Add** to create one.",
+      "Click the **Tasks** icon, then **Add task**. Enter a **Title**, add a description or click **Remove description**, set the **Due date and time**, optionally turn on **Setup recurring tasks**, select a user under **Assign to**, and click **Create**.",
+      "Click the **Notes** icon, then **Add note**. Enter a **Title** that summarizes the note and the **Description** (required). Optionally pick a **Color** or click **Upload file** to attach files, then click **Save**.",
+      "Click the **Appointments** icon to see **Upcoming** and **Past** appointments. To book one, click **+ Add** > **Meetings**, complete the **Book appointment** window (**Calendar**, **Appointment title**, **Team member**, **Date & time**, **Meeting location**, **Status**), and click **Book appointment**.",
+      "Click the **Documents** icon to view agreements and other documents (**All**, **Internal**, **Sent**, **Received**), the **Payments** icon to view **Transactions**, **Subscriptions**, **Invoices**, and **Estimates**, and the **Agent Logs** icon to view actions logged by an AI agent for this contact."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "A contact who replies STOP to a text, or unsubscribes from an email campaign, is marked DND automatically. You only need to uncheck DND manually if the contact later asks to be contacted again."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/05-1.jpg",
+     "afterStep": 7,
+     "caption": "The DND tab: check DND All Channels or individual channels such as Email or Text Messages."
+    },
+    {
+     "src": "shots/05-2.jpg",
+     "afterStep": 11,
+     "caption": "The Actions tab with Opportunities, Workflows (Active and Past), and Client portal (Offers and Community groups) expanded."
+    },
+    {
+     "src": "shots/05-3.jpg",
+     "afterStep": 19,
+     "caption": "The Add task panel opened from the Tasks icon in the right icon bar: Title, description, Due date and time, Assign to, then Create."
+    }
+   ],
+   "searchTerms": [
+    "open a contact record",
+    "assign contact owner",
+    "add a follower to a contact",
+    "edit contact fields",
+    "mark contact as do not disturb",
+    "remove dnd from a contact",
+    "see what workflows a contact is in",
+    "send an email from a contact",
+    "insert custom value in email",
+    "schedule a message to send later",
+    "add a task to a contact",
+    "add a note to a contact",
+    "book an appointment from contact record",
+    "link contact to a company",
+    "view contact payments and invoices"
+   ],
+   "status": "active",
+   "source": "GoHighLevel Contacts.mp4"
+  },
+  {
+   "id": "crm-06",
+   "slug": "manage-opportunities-and-pipelines",
+   "title": "Managing Opportunities & Pipelines",
+   "category": "Core CRM",
+   "order": 6,
+   "description": "Work opportunities on the pipeline board: switch pipelines, move cards through stages, use card quick actions, and edit opportunity details such as stage, status, and value.",
+   "videoUrl": "videos/06.mp4",
+   "videoDuration": "4:56",
+   "whatYouWillLearn": [
+    "Open the Opportunities board and switch between pipelines",
+    "Move opportunities between stages with drag and drop",
+    "Mark an opportunity as Won, Lost, or Abandoned",
+    "Use the quick action icons on an opportunity card",
+    "Tell the difference between the opportunity card and the contact record",
+    "Edit pipeline, stage, status, value, and owner in the opportunity window",
+    "Delete an opportunity that should not be in the pipeline"
+   ],
+   "sop": [
+    {
+     "heading": "Open the pipeline board",
+     "steps": [
+      "In the left sidebar, click **Opportunities**. The **Opportunities** tab opens with opportunity cards arranged in stage columns.",
+      "Click the pipeline dropdown at the top left (for example **Lead Pipeline**) and select the pipeline you want to work in.",
+      "Read the board from left to right. The first column (for example **New Lead**) holds the newest, most open opportunities; columns further right hold opportunities closer to a decision. Scroll right to see later stages. Each column header shows the opportunity count and total value."
+     ]
+    },
+    {
+     "heading": "Move opportunities through stages",
+     "steps": [
+      "Drag an opportunity card and drop it into the stage column it now belongs in.",
+      "To close out an opportunity, start dragging the card. Drop zones appear at the bottom of the screen: drop it on **Won** if the deal closed and payment was collected, or on **LOST** if the lead is not interested or did not close. **ABANDONED** is also available."
+     ]
+    },
+    {
+     "heading": "Use card quick actions",
+     "steps": [
+      "Use the icons along the bottom of a card to act without opening the contact. Hover to see each label: **Call**, conversation, **Add tags**, **Add note**, **Add task**, and **Add an appointment**.",
+      "To open the full contact record, click the contact name at the top of the card. The **Contact Details** page opens in **Contacts**. To return to the board, click **Opportunities** in the left sidebar (the back arrow on the contact record goes to the Contacts list, not the board)."
+     ]
+    },
+    {
+     "heading": "Edit opportunity details",
+     "steps": [
+      "Click anywhere on the card outside the contact name. The **Edit** window opens on **Opportunity details**.",
+      "To move the opportunity, select a different **Pipeline** and then the **Stage** it belongs in.",
+      "Set **Status** to **Open**, **Lost**, **Won**, or **Abandon**.",
+      "When a deal is won, enter the closed amount in **Value**.",
+      "Confirm or set **Owner** and **Followers**, and fill in **Source**, **Expected Close Date**, and **Tags** as needed.",
+      "Use the menu on the left of the window (**Source**, **Revenue**, **Outcome**, **Dates**, **Tasks**, **Notes**, **Payments**, and others) to view additional sections.",
+      "Click **Update** to save your changes, or close the window with the **X** to leave without saving."
+     ]
+    },
+    {
+     "heading": "Delete an opportunity",
+     "steps": [
+      "If an opportunity should not be in the pipeline, open it and click the red trash icon at the bottom of the **Edit** window, next to **Cancel**."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "If you mark an opportunity as Won without entering its Value, the amount will not appear in dashboard reporting. Always update Value when closing a deal.",
+    "Clicking the contact name opens the contact record; clicking elsewhere on the card opens the opportunity. These are two different records.",
+    "After you add notes, tasks, or appointments from a card, the card shows a count on that icon so you can see at a glance which opportunities have activity."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/06-1.jpg",
+     "afterStep": 5,
+     "caption": "While dragging a card, the LOST, ABANDONED, and Won drop zones appear along the bottom of the board."
+    },
+    {
+     "src": "shots/06-2.jpg",
+     "afterStep": 6,
+     "caption": "Quick action icons on an opportunity card. Hover an icon to see its label, such as Add an appointment."
+    },
+    {
+     "src": "shots/06-3.jpg",
+     "afterStep": 8,
+     "caption": "The opportunity window: Pipeline, Stage, Status, Value, Owner, Source, and the Update and delete buttons."
+    }
+   ],
+   "searchTerms": [
+    "move opportunity to another stage",
+    "drag and drop pipeline card",
+    "switch pipeline view",
+    "mark deal as won",
+    "mark lead as lost",
+    "update opportunity value",
+    "change opportunity status",
+    "move opportunity to different pipeline",
+    "assign opportunity owner",
+    "delete opportunity",
+    "open contact from opportunity",
+    "add task from pipeline card",
+    "book appointment from opportunity"
+   ],
+   "status": "active",
+   "source": "ghlopportunity.mp4"
+  },
+  {
+   "id": "crm-07",
+   "slug": "use-payments",
+   "title": "Using Payments",
+   "category": "Core CRM",
+   "order": 7,
+   "description": "Find your way around the Payments area: connect a payment provider, locate invoices, documents, orders, and subscriptions, and understand how products and payment links fit together.",
+   "videoUrl": "videos/07.mp4",
+   "videoDuration": "1:43",
+   "whatYouWillLearn": [
+    "Connect a payment provider, accounting software, and payment permissions",
+    "Find invoices, estimates, and invoice templates",
+    "Create and manage documents and contracts for signature",
+    "Locate orders, abandoned checkouts, and subscriptions",
+    "Create a product and use it in a payment link",
+    "Find coupons, gift cards, and payment integrations"
+   ],
+   "sop": [
+    {
+     "heading": "Connect a payment provider",
+     "steps": [
+      "In the left sidebar, click **Payments**. The **Invoices** page opens under **Invoices & Estimates**.",
+      "In the **Get started with payments** panel, click **Connect your payment provider** to see supported providers (Stripe, NMI, Authorize.net, PayPal, Square, Mercado Pago, and custom providers). You can also click **Integrate Payment Gateway** on the Invoices page.",
+      "Click **Connect your accounting** to connect QuickBooks.",
+      "Click **Control who can see your payments** to set which team members can view payments."
+     ]
+    },
+    {
+     "heading": "Invoices, estimates, documents, and contracts",
+     "steps": [
+      "Open the **Invoices & Estimates** dropdown to reach **All Invoices**, **Recurring Invoices**, **Templates**, **Estimates**, and **Accounting Sync**. The Invoices page shows totals for draft, due, received, and overdue invoices.",
+      "Open the **Documents & Contracts** dropdown and choose **All Documents & Contracts** to create documents and contracts and send them for signature, or **Templates** to build reusable templates."
+     ]
+    },
+    {
+     "heading": "Orders and subscriptions",
+     "steps": [
+      "Open the **Orders** dropdown to view **Orders** and **Abandoned Checkouts** for product sales.",
+      "Click **Subscriptions** to view recurring payments."
+     ]
+    },
+    {
+     "heading": "Create a product and payment link",
+     "steps": [
+      "Make sure a payment provider is connected first.",
+      "Click **Products**, then click **Create Product**. You can also use **Import as CSV** or **Import from Stripe**.",
+      "Click **Payment Links**, then click **Create New Payment Link** (or **Create Link**).",
+      "In the link editor, under **Product**, click **Select a product** and choose the product. Set **Options** and **Advanced Options** as needed, then click **Save**."
+     ]
+    },
+    {
+     "heading": "Coupons, gift cards, and integrations",
+     "steps": [
+      "Click **Coupons** and then **Create Coupon** to create discounts, or click **Gift Cards** to manage gift cards.",
+      "Click **Integrations** to see all payment providers, each with a **Connect** button. Use **Configure providers** to manage connected providers."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "You need at least one connected payment gateway before you can receive payments."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/07-1.jpg",
+     "afterStep": 2,
+     "caption": "The Get started with payments panel: connect a payment provider, connect accounting, and control who can see payments."
+    },
+    {
+     "src": "shots/07-2.jpg",
+     "afterStep": 12,
+     "caption": "The payment link editor. Choose the product under Product, set options on the left, and click Save."
+    }
+   ],
+   "searchTerms": [
+    "connect stripe",
+    "connect payment provider",
+    "connect quickbooks",
+    "who can see payments",
+    "create an invoice",
+    "invoice templates",
+    "create an estimate",
+    "send a contract for signature",
+    "create a product",
+    "create a payment link",
+    "view subscriptions",
+    "abandoned checkouts",
+    "create a coupon",
+    "payment integrations"
+   ],
+   "status": "active",
+   "source": "GoHigh Level Payments.mp4"
+  },
+  {
+   "id": "crm-08",
+   "slug": "use-the-ai-agent",
+   "title": "Using the AI Agent",
+   "category": "Core CRM",
+   "order": 8,
+   "description": "Navigate the AI Agents area of GoHighLevel and understand what each tab is used for, from building managed agents to browsing prebuilt industry agents.",
+   "videoUrl": "videos/08.mp4",
+   "videoDuration": "1:15",
+   "whatYouWillLearn": [
+    "Open the AI Agents area from the left sidebar",
+    "Where to build and manage prompt based agents in Agent Studio",
+    "Where voice receptionists and Conversation AI agents are created",
+    "How knowledge bases and agent templates support your agents",
+    "Where AI generated text and images are tracked in Content AI",
+    "How to deploy a prebuilt agent from Industry Agents"
+   ],
+   "sop": [
+    {
+     "heading": "Open AI Agents",
+     "steps": [
+      "In the left sidebar, click **AI Agents**. The page opens on the **Getting Started** tab.",
+      "Review the tabs across the top: **Getting Started**, **Agent Studio**, **Voice AI**, **Conversation AI**, **Knowledge Base**, **Agent Templates**, **Content AI**, **Agent Logs** and **Industry Agents**."
+     ]
+    },
+    {
+     "heading": "Build and manage agents",
+     "steps": [
+      "Click **Agent Studio** to see **Managed Agents**. These are prompt based agents that can use a prompt, knowledge, web search and integrations to analyze and build things inside the account. Click **Create Managed Agent** to start one, or **New Folder** to organize them.",
+      "Click **Voice AI** to set up an AI voice receptionist. Click **Create from scratch** to build one, or **Explore templates** to start from a template.",
+      "Click **Conversation AI** to manage agents that talk to leads for you. Click **Create Agent** to build one, or **Go to Agent List** to view existing agents. Use **Manage Knowledge Base** to control what the agent knows.",
+      "Click **Knowledge Base** to view the knowledge bases your agents draw from. Click **Create knowledge base** to add one."
+     ]
+    },
+    {
+     "heading": "Templates and content",
+     "steps": [
+      "Click **Agent Templates** to browse ready made agent templates for conversations with leads. Use the filters on the left (**Categories**, **Use Cases**, **Business Niche**, **Pricing**, **Actions**) to narrow results. Each template shows whether it is **Free** or **Paid**.",
+      "Click **Content AI** to review AI generated content. Use the **Text** and **Image** tabs, and filter by **Social Planner**, **Blog**, **Funnel**, **Website**, **Email** or **Conversation**.",
+      "Use **Agent Logs** to review agent activity."
+     ]
+    },
+    {
+     "heading": "Use an industry agent",
+     "steps": [
+      "Click **Industry Agents**. Under **My agents** you see agents already deployed in the account.",
+      "Under **Available agents**, review the preconfigured agents and click **Use this agent** on the one that fits, or click **Add industry agent** to add one."
+     ]
+    }
+   ],
+   "importantNotes": [],
+   "screenshots": [
+    {
+     "src": "shots/08-1.jpg",
+     "afterStep": 2,
+     "caption": "The AI Agents tab bar, from Getting Started through Industry Agents"
+    },
+    {
+     "src": "shots/08-2.jpg",
+     "afterStep": 11,
+     "caption": "Industry Agents: My agents at the top, Available agents with Use this agent below"
+    }
+   ],
+   "searchTerms": [
+    "ai agents",
+    "find the ai agent",
+    "create an ai agent",
+    "agent studio",
+    "set up voice ai receptionist",
+    "conversation ai agent",
+    "create knowledge base",
+    "agent templates",
+    "content ai images",
+    "industry agents",
+    "use a prebuilt agent",
+    "ai that talks to leads"
+   ],
+   "status": "active",
+   "source": "GHL AI AGENT.mp4"
+  },
+  {
+   "id": "crm-09",
+   "slug": "use-marketing-tools",
+   "title": "Using Marketing Tools",
+   "category": "Core CRM",
+   "order": 9,
+   "description": "Find your way around the Marketing area of GoHighLevel, including social posting, email campaigns, snippets, countdown timers, trigger links, ads and prospecting.",
+   "videoUrl": "videos/09.mp4",
+   "videoDuration": "2:33",
+   "whatYouWillLearn": [
+    "Connect social accounts in the Social Planner",
+    "Review email performance and start an email campaign",
+    "Where snippets, countdown timers and trigger links are managed",
+    "What trigger links do inside emails and SMS",
+    "Where to activate Ad Manager and add prospects"
+   ],
+   "sop": [
+    {
+     "heading": "Open Marketing",
+     "steps": [
+      "In the left sidebar, click **Marketing**. The tabs across the top are **Social Planner**, **Emails**, **Snippets**, **Countdown Timers**, **Trigger Links**, **Affiliate Manager**, **Brand Boards**, **Ad Manager** and **Prospecting**."
+     ]
+    },
+    {
+     "heading": "Social Planner",
+     "steps": [
+      "On the **Social Planner** tab, under **Connect your social accounts**, click **+ Connect** below the network you want to link (for example **Facebook**, **Instagram**, **LinkedIn**, **TikTok**, **YouTube**, or under **Also available**, **Pinterest**, **Threads**, **Bluesky**, **GBP** or **Community**).",
+      "Once accounts are connected, use the Social Planner to schedule posts to them."
+     ]
+    },
+    {
+     "heading": "Email campaigns",
+     "steps": [
+      "Click **Emails** to open **Email Marketing**. The **Statistics** tab shows the **Engagement summary** (Delivered, Opened, Clicked, Ordered) for your campaigns.",
+      "Use the **All Campaigns** dropdown and the date range to filter the statistics. Hover a bar to see the breakdown by campaign type.",
+      "Click **Create campaign** to build a new email campaign. Use the **Campaigns** and **Templates** tabs to manage existing campaigns and templates.",
+      "If the page shows **You're viewing sample data**, click **Clear sample data** to remove the demo numbers."
+     ]
+    },
+    {
+     "heading": "Snippets, timers and trigger links",
+     "steps": [
+      "Click **Snippets** to manage saved message content. These are the same snippets available in Conversations. Click **New Snippet** to add one, or **New Folder** to organize them.",
+      "Click **Countdown Timers**, then click **New** to create a timer for an offer or deadline. The timer can be placed inside emails.",
+      "Click **Trigger Links**, then click **Add Link** to create a link. Place trigger links inside an email or SMS to track when a contact clicks and to trigger events based on that click. Use the **Analyze** tab to review link activity."
+     ]
+    },
+    {
+     "heading": "Other marketing tabs",
+     "steps": [
+      "Click **Ad Manager**, then **Activate Ads Manager** to launch and manage ads across Facebook, Google and LinkedIn from one place.",
+      "Click **Prospecting** to open **Prospect accounts**. Click **Add prospect** to add a business and generate audit reports. The header shows how many premium reports remain this month; **Unlock premium** upgrades the feature.",
+      "**Affiliate Manager** (dropdown: **Dashboard**, **Campaign**, **Affiliate**, **Payout**, **Media**, **Settings**) and **Brand Boards** (**Design Kit**, **Brand Voice**) are also available in this area."
+     ]
+    }
+   ],
+   "importantNotes": [],
+   "screenshots": [
+    {
+     "src": "shots/09-1.jpg",
+     "afterStep": 2,
+     "caption": "Social Planner with a + Connect button under each network"
+    },
+    {
+     "src": "shots/09-2.jpg",
+     "afterStep": 5,
+     "caption": "Email Marketing Statistics with the Create campaign button and campaign filter"
+    },
+    {
+     "src": "shots/09-3.jpg",
+     "afterStep": 10,
+     "caption": "Trigger Links page with the Add Link button"
+    }
+   ],
+   "searchTerms": [
+    "marketing tab",
+    "connect instagram to social planner",
+    "schedule social posts",
+    "create email campaign",
+    "email statistics",
+    "clear sample data",
+    "where are snippets",
+    "create countdown timer",
+    "create trigger link",
+    "track link clicks in sms",
+    "activate ads manager",
+    "add a prospect",
+    "prospecting reports"
+   ],
+   "status": "active",
+   "source": "GHL Marketing.mp4"
+  },
+  {
+   "id": "crm-10",
+   "slug": "build-and-organize-automations",
+   "title": "Understanding Automations",
+   "category": "Core CRM",
+   "order": 10,
+   "description": "Learn how GoHighLevel workflows are built from a trigger and actions, create a simple workflow that adds new contacts to a pipeline, and keep workflows organized in folders.",
+   "videoUrl": "videos/10.mp4",
+   "videoDuration": "3:05",
+   "whatYouWillLearn": [
+    "Open the Workflows list and start a new workflow",
+    "Describe an automation to the built in AI",
+    "Name a workflow",
+    "Add a trigger and an action",
+    "Add new contacts to a pipeline stage automatically",
+    "Browse the available action categories",
+    "Create folders and move workflows into them"
+   ],
+   "sop": [
+    {
+     "heading": "Start a workflow",
+     "steps": [
+      "In the left sidebar, click **Automation**. The **Workflows** tab shows the **Workflows list**.",
+      "Click **Create workflow** (or **Build using AI**). The workflow builder opens on the **Builder** tab.",
+      "To have AI build it for you, type what you want in the **What do you want to automate?** box, for example: after sending a proposal, send an SMS follow up 24 hours later to confirm it was signed.",
+      "Click the workflow name at the top of the builder (pencil icon) and rename it so it is clear what the workflow does."
+     ]
+    },
+    {
+     "heading": "Add a trigger",
+     "steps": [
+      "Click **Add new trigger**.",
+      "In the **Add trigger** panel, search for the trigger (for example type \"new\") and select **Contact created**.",
+      "Confirm **Choose a workflow trigger** shows **Contact created**, then click **Save trigger**."
+     ]
+    },
+    {
+     "heading": "Add an action",
+     "steps": [
+      "Click the **+** below the trigger to open the **Actions** panel.",
+      "Search \"opp\" and select **Create/update opportunity**.",
+      "Set **In pipeline** (for example **Lead Pipeline**) and **In pipeline stage** (for example **New Lead**).",
+      "Leave **Opportunity name** and **Opportunity source** blank if not needed. If leads usually close at a set amount, enter it in **Opportunity value**.",
+      "Set **Status** to **open**, then click **Save action**. The workflow now adds every newly created contact to the selected pipeline stage.",
+      "To explore other actions, click **+** again and scroll the **Actions** panel. Categories include **Communication** (Send email, Send SMS), **Internal** (If / else, Wait), **Opportunity**, **Payments**, **Workflow AI**, **External AI models** (GPT powered by OpenAI) and marketing actions such as **Meta conversion API**. The **Apps** tab holds integrations."
+     ]
+    },
+    {
+     "heading": "Organize workflows in folders",
+     "steps": [
+      "Return to the **Workflows list** and click **Create folder**.",
+      "Enter a **Folder name** and click **Create**.",
+      "Tick the checkboxes next to the workflows that belong in the folder, then click **Move** in the toolbar.",
+      "In the **Move items to folder** window, pick the folder (or click **New folder**) and click **Move Here**."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "The builder shows a **Draft** / **Publish** toggle at the top right. The video does not show publishing; the demo workflow stayed in Draft."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/10-1.jpg",
+     "afterStep": 7,
+     "caption": "Contact created trigger selected, with the Save trigger button"
+    },
+    {
+     "src": "shots/10-2.jpg",
+     "afterStep": 12,
+     "caption": "Opportunity action fields: pipeline, stage, value and status"
+    },
+    {
+     "src": "shots/10-3.jpg",
+     "afterStep": 17,
+     "caption": "Selected workflows and the Move to folder window with Move Here"
+    }
+   ],
+   "searchTerms": [
+    "create a workflow",
+    "build automation with ai",
+    "add a trigger",
+    "contact created trigger",
+    "add new lead to pipeline automatically",
+    "create opportunity in workflow",
+    "workflow actions list",
+    "rename a workflow",
+    "create workflow folder",
+    "move workflows to folder",
+    "organize automations",
+    "where are automations"
+   ],
+   "status": "active",
+   "source": "GHL Automations.mp4"
+  },
+  {
+   "id": "crm-11",
+   "slug": "use-the-sites-tab",
+   "title": "Using the Sites Tab",
+   "category": "Core CRM",
+   "order": 11,
+   "description": "Find your way around the Sites area of GoHighLevel, understand what each tab is used for, and start a new funnel from scratch, with AI, or from a template.",
+   "videoUrl": "videos/11.mp4",
+   "videoDuration": "1:42",
+   "whatYouWillLearn": [
+    "Open the Sites area and move between its tabs",
+    "Understand the difference between a funnel and a website",
+    "Know where to build stores, blogs, forms, surveys, chat widgets and QR codes",
+    "Find the Client Portal dashboard, settings and branded app options",
+    "Start a new funnel from blank, with AI, or from a template"
+   ],
+   "sop": [
+    {
+     "heading": "Open the Sites area",
+     "steps": [
+      "In the left sidebar, click **Sites**. The **Funnels** tab opens by default.",
+      "Use the tab bar across the top to switch tools: **Funnels**, **Websites**, **Stores**, **Webinars**, **Analytics**, **Blogs**, **WordPress**, **Client Portal**, **Forms**, **Surveys**, **Quizzes**, **Chat Widget** and **QR Codes**."
+     ]
+    },
+    {
+     "heading": "Know what each tab is for",
+     "steps": [
+      "Use **Funnels** for pages that lead a visitor to one specific action, such as booking an appointment.",
+      "Use **Websites** for general information pages about the business.",
+      "Click **Stores** to build an online store. The first visit shows **Welcome to Stores!** with a **Start Onboarding** button; after that, use **New store**.",
+      "Use **Webinars** to build webinar funnels and **Analytics** to review site performance.",
+      "Click **Blogs** to manage blogs. Use **Create blog** or **New blog site** to add one.",
+      "Hover over **Client Portal** to open its menu: **Dashboard**, **Settings** and **Branded Mobile App**. Use these to review and brand your client portal.",
+      "Click **Forms** and then **Create form** to build a form with the drag and drop builder. Click **Surveys** and then **Create survey** to build a survey the same way. Add finished forms and surveys to your website pages.",
+      "Click **Chat Widget** and then **New** to create a chat widget, then add it to your website.",
+      "Click **QR Codes** to create QR codes."
+     ]
+    },
+    {
+     "heading": "Start a new funnel",
+     "steps": [
+      "On the **Funnels** tab, click **New funnel**. (You can also click **Build with AI** directly.)",
+      "In the **Create new funnel** window, choose how to start: **From blank** (enter a **Funnel name**), **Build with AI**, or **From templates** to pick from the prebuilt template library.",
+      "Click **Continue**."
+     ]
+    }
+   ],
+   "importantNotes": [],
+   "screenshots": [
+    {
+     "src": "shots/11-1.jpg",
+     "afterStep": 2,
+     "caption": "The Sites tab bar, with the Client Portal menu open showing Dashboard, Settings and Branded Mobile App."
+    },
+    {
+     "src": "shots/11-2.jpg",
+     "afterStep": 13,
+     "caption": "The Create new funnel window: start From blank, Build with AI, or From templates, then click Continue."
+    }
+   ],
+   "searchTerms": [
+    "build a funnel",
+    "create a website page",
+    "sites tab overview",
+    "difference between funnel and website",
+    "create a form",
+    "build a survey",
+    "add chat widget to website",
+    "create a qr code",
+    "use a funnel template",
+    "build a funnel with ai",
+    "set up an online store",
+    "create a blog",
+    "client portal settings"
+   ],
+   "status": "active",
+   "source": "Sites Tab GHL.mp4"
+  },
+  {
+   "id": "crm-12",
+   "slug": "connect-profile-and-calendar",
+   "title": "Connecting Your Profile & Calendar",
+   "category": "Settings & Configuration",
+   "order": 12,
+   "description": "Update your user profile, connect a third-party calendar, set your weekly availability, and configure notifications and your password from My Profile.",
+   "videoUrl": "videos/12.mp4",
+   "videoDuration": "0:55",
+   "whatYouWillLearn": [
+    "Open My Profile from Settings",
+    "Update your personal details and email signature",
+    "Start a third-party calendar connection",
+    "Set weekly working hours and date-specific overrides",
+    "Choose how you receive notifications",
+    "Change your password"
+   ],
+   "sop": [
+    {
+     "heading": "Open your profile",
+     "steps": [
+      "In the left sidebar, click **Settings**.",
+      "Click **My Profile**."
+     ]
+    },
+    {
+     "heading": "Update personal details",
+     "steps": [
+      "On the **General** tab, under **Personal Details**, update **First Name**, **Last Name**, **Email**, **Phone** and **Extension**. Upload a **Profile image** if needed (512 x 512 px, no bigger than 2.5 MB).",
+      "Under **Signature**, write your email signature in the editor. Turn on **Enable signature on all outgoing messages** and, if wanted, check **Include this signature before quoted text in replies**.",
+      "Click **Update profile**."
+     ]
+    },
+    {
+     "heading": "Connect your calendar",
+     "steps": [
+      "Click **Calendar** in the profile menu. The **Calendars** tab shows your **Connected calendars**.",
+      "Click **Add new** to connect a third-party calendar so bookings sync and your availability is checked against it.",
+      "Under **Additional calendar settings**, leave **Hide event details** on for **Private mode for synced events** so only you can see third-party event details, and choose a **Timezone** under **View appointments in**."
+     ]
+    },
+    {
+     "heading": "Set your availability",
+     "steps": [
+      "Scroll down to the weekly hours. Check each day you are available; leave a day unchecked to mark it **Unavailable**.",
+      "For each checked day, set the **Start time** and **End time** with AM or PM. Use the icons beside the row to add another time range, delete a range or copy the hours.",
+      "To override weekly hours on specific dates, click **Add date specific hours** under **Date specific hours**."
+     ]
+    },
+    {
+     "heading": "Notifications and password",
+     "steps": [
+      "Click **Notifications**. Under **Notification Settings**, choose the channels (**In-App**, **Email**, **SMS**) and expand each category, such as **Conversation Notifications**, **Task Notifications** and **Calendar Notifications**, to set what you receive. Click **Save**.",
+      "Click **Security** to change your password. Enter **Current password**, **New password** and **Confirm password**, then click **Update password**."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "The calendar connection flow after clicking **Add new** is not shown in the video. Follow the on-screen prompts for your calendar provider."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/12-1.jpg",
+     "afterStep": 7,
+     "caption": "My Profile > Calendar: the Add new button under Connected calendars and the Additional calendar settings."
+    },
+    {
+     "src": "shots/12-2.jpg",
+     "afterStep": 10,
+     "caption": "Weekly hours with Start time and End time per day, and the Add date specific hours button."
+    }
+   ],
+   "searchTerms": [
+    "connect google calendar",
+    "connect my calendar",
+    "sync outlook calendar",
+    "set my availability",
+    "set working hours",
+    "block off a specific date",
+    "update my profile",
+    "change my email signature",
+    "change notification settings",
+    "turn on sms notifications",
+    "change my password",
+    "edit my name and phone",
+    "hide calendar event details",
+    "change appointment timezone"
+   ],
+   "status": "active",
+   "source": "Connecting calendar and profile.mp4"
+  },
+  {
+   "id": "crm-13",
+   "slug": "create-a-calendar",
+   "title": "Creating a Calendar",
+   "category": "Settings & Configuration",
+   "order": 13,
+   "description": "Create a new booking calendar in Settings and share its booking link, and know where the other Business Services settings (email, phone, WhatsApp) live.",
+   "videoUrl": "videos/13.mp4",
+   "videoDuration": "1:27",
+   "whatYouWillLearn": [
+    "Open calendar settings from Business Services",
+    "Choose the right calendar type",
+    "Set the calendar name, description, team member, URL, and meeting duration",
+    "Find advanced settings for availability",
+    "Copy a calendar's scheduling or permanent link to share",
+    "Locate Email Services, Phone System, and WhatsApp settings"
+   ],
+   "sop": [
+    {
+     "heading": "Create a calendar",
+     "steps": [
+      "Click **Settings** at the bottom of the left sidebar, then under **BUSINESS SERVICES** click **Calendars**. The **Calendars** list opens on the **Meetings** tab.",
+      "Click **New calendar**.",
+      "In **Choose calendar type**, select the type you need: **Personal booking** (one-on-one with a specific team member), **Round robin** (rotates appointments among team members), **Class booking** (one host, multiple participants), or **Collective booking** (multiple hosts, one participant). Click **Explore more types** for other options.",
+      "In the **New calendar** window, enter the **Calendar name**. Click **Add description** to add a description.",
+      "Under **Select team member**, confirm or choose the team member the calendar belongs to.",
+      "In **Custom URL**, enter the URL slug for the booking page (for example my-calendar).",
+      "Set **Meeting duration** and choose the unit (for example **Minutes**).",
+      "Review **Booking availability**. To customize hours and other options, click **Advanced settings**.",
+      "Click **Confirm** to create the calendar."
+     ]
+    },
+    {
+     "heading": "Share a calendar",
+     "steps": [
+      "In the calendar list, find the calendar and click the share (arrow) icon in the **Actions** column.",
+      "In **Share calendar**, on the **Scheduling link** tab, click **Copy** next to **Scheduling link** or **Permanent link** and send it to the person booking. Use the **One time link** or **Embed code** tabs for those options."
+     ]
+    },
+    {
+     "heading": "Other Business Services settings",
+     "steps": [
+      "Click **Email Services** to manage your sending domain. Use **Add a dedicated domain** or **Dedicated Domain And IP** to connect your own domain for higher sending limits and better deliverability.",
+      "Click **Phone System** to get and manage phone numbers and complete A2P registration, using the **Phone numbers**, **Regulatory Bundles**, **Messaging**, **Voice**, **Trust Center**, and **Additional Settings** tabs.",
+      "Click **WhatsApp** to set up WhatsApp messaging if you use it."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "The Scheduling link changes if you change the calendar's URL slug. Use the Permanent link for funnels, website redirects, and ads, since it stays the same.",
+    "Text messages cannot be sent from a phone number until it is registered for A2P."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/13-1.jpg",
+     "afterStep": 3,
+     "caption": "Choose calendar type: Personal booking, Round robin, Class booking, or Collective booking."
+    },
+    {
+     "src": "shots/13-2.jpg",
+     "afterStep": 8,
+     "caption": "The New calendar window with name, team member, Custom URL, meeting duration, availability, and Advanced settings."
+    },
+    {
+     "src": "shots/13-3.jpg",
+     "afterStep": 11,
+     "caption": "Share calendar: copy the Scheduling link or the Permanent link."
+    }
+   ],
+   "searchTerms": [
+    "create a calendar",
+    "new booking calendar",
+    "round robin calendar",
+    "personal booking calendar",
+    "set meeting duration",
+    "change calendar url",
+    "calendar availability settings",
+    "share calendar link",
+    "copy booking link",
+    "embed calendar",
+    "connect email domain",
+    "get a phone number",
+    "a2p registration",
+    "whatsapp setup"
+   ],
+   "status": "active",
+   "source": "Creating a calendar.mp4"
+  },
+  {
+   "id": "crm-14",
+   "slug": "create-custom-fields-and-custom-values",
+   "title": "Creating Custom Fields & Custom Values",
+   "category": "Settings & Configuration",
+   "order": 14,
+   "description": "Create custom fields to store data GoHighLevel does not track by default, and create custom values that insert saved text into messages and emails.",
+   "videoUrl": "videos/14.mp4",
+   "videoDuration": "2:33",
+   "whatYouWillLearn": [
+    "Open the Custom Fields and Custom Values pages in Settings",
+    "Choose the right field type, such as dropdown, file upload or date picker",
+    "Attach a field to the Contact, Opportunity or Business object and a folder",
+    "Add dropdown options and create the field",
+    "Understand what a custom value is and how to add one"
+   ],
+   "sop": [
+    {
+     "heading": "Create a custom field",
+     "steps": [
+      "Go to **Settings** and click **Custom Fields** in the settings menu.",
+      "Click **Create field**. The **Create custom field** panel opens.",
+      "Open the **Field type** dropdown and choose the type you need, for example **Single line**, **Number**, **Dropdown (single)**, **Dropdown (multiple)**, **Radio select**, **Checkbox**, **File upload** or **Date picker**.",
+      "Open **Add to object** and choose where the field will appear: **Contact** (contact record), **Opportunity** (opportunity card) or **Business**.",
+      "Open **Folder name** and choose the folder the field belongs in.",
+      "Enter the **Field name**, for example a question such as \"Are you located in the area?\". The **Key** is generated automatically.",
+      "For a dropdown field, type the first choice in **Enter option** under **Dropdown options**, then click **Add option** and enter each additional choice (for example Yes and No).",
+      "Check the **Live preview** on the right, then click **Create custom field** to save."
+     ]
+    },
+    {
+     "heading": "Create a custom value",
+     "steps": [
+      "In the settings menu, click **Custom Values**.",
+      "Click **Add custom value**.",
+      "Enter a **Name** for the value (for example Facebook) and the **Value** it should insert (for example the business Facebook URL). Optionally choose a **Folder**.",
+      "Click **Create**. Insert the custom value in a text message or email and it fills in the saved value automatically."
+     ]
+    }
+   ],
+   "importantNotes": [
+    "Select **Add to object** and **Folder name** before entering dropdown options or other details. The trainer warns that changing these afterward clears the options you already entered.",
+    "Use custom fields only for data that does not already have a standard field in the CRM."
+   ],
+   "screenshots": [
+    {
+     "src": "shots/14-1.jpg",
+     "afterStep": 4,
+     "caption": "Add to object options: Contact, Opportunity and Business."
+    },
+    {
+     "src": "shots/14-2.jpg",
+     "afterStep": 7,
+     "caption": "A dropdown field with its name, auto-generated key, two options and the live preview. Object and folder still need to be selected before Create custom field is enabled."
+    },
+    {
+     "src": "shots/14-3.jpg",
+     "afterStep": 11,
+     "caption": "The Add custom value window with Name, Value and Folder."
+    }
+   ],
+   "searchTerms": [
+    "create a custom field",
+    "add dropdown field",
+    "add a field to contact record",
+    "add field to opportunity",
+    "custom field folder",
+    "create custom value",
+    "insert business name in text",
+    "what is a custom value",
+    "custom field types",
+    "file upload field",
+    "add options to dropdown field",
+    "where are custom fields"
+   ],
+   "status": "active",
+   "source": "Creating Custom Fields and Values in CRM.mp4"
+  },
+  {
+   "id": "crm-15",
+   "slug": "explore-app-marketplace-and-reporting",
+   "title": "App Marketplace & Reporting",
+   "category": "Additional Tools",
+   "order": 15,
+   "description": "Get oriented with the remaining sidebar tools: Memberships, Media Storage, Reputation, Reporting and the App Marketplace, and know what each is used for.",
+   "videoUrl": "videos/15.mp4",
+   "videoDuration": "2:20",
+   "whatYouWillLearn": [
+    "Where courses and communities live under Memberships",
+    "Where uploaded images and videos are stored",
+    "How to reach the Reputation dashboard for reviews",
+    "How to open call, appointment and ad reports",
+    "How to generate a Local Marketing Audit",
+    "How to browse and search the App Marketplace"
+   ],
+   "sop": [
+    {
+     "heading": "Memberships, Media Storage and Reputation",
+     "steps": [
+      "In the left sidebar, click **Memberships** to build courses and communities. Use the tabs at the top: **Client Portal**, **Courses**, **Communities** and **Credentials**.",
+      "Click **Media Storage** to see every image and video uploaded to the account. Use **Upload** to add files, or **Connect Canva** and **Connect Drive** to link those sources.",
+      "Click **Reputation** to track and manage reviews. On the **Overview** tab, use the **Get Started** checklist (starting with **Connect Google Business Profile**) to connect your Google reviews."
+     ]
+    },
+    {
+     "heading": "Reporting",
+     "steps": [
+      "Click **Reporting** in the left sidebar.",
+      "Click **Google Ads** or **Meta Ads (Facebook Ads) report** to view ad reporting once those accounts are connected.",
+      "Click **Call report** to review call activity. Switch between **Incoming** and **Outgoing**, and adjust the date range as needed.",
+      "Click **Appointment report** to see appointments by status (Booked, Confirmed, Cancelled, Showed, No-show and more).",
+      "Click **Local Marketing Audit** and then **Generate report now** to create an audit of website performance, local SEO and local search rankings."
+     ]
+    },
+    {
+     "heading": "App Marketplace",
+     "steps": [
+      "Click **App Marketplace** in the left sidebar to open **Marketplace Apps**.",
+      "On the **All Apps** tab, use **Search Apps** or the filters on the left (**Categories**, **Business Niche**, **Pricing** and others) to find apps for your industry, such as Canva or Slack.",
+      "Check **Installed Apps** to see what is already added to the account."
+     ]
+    }
+   ],
+   "importantNotes": [],
+   "screenshots": [
+    {
+     "src": "shots/15-1.jpg",
+     "afterStep": 6,
+     "caption": "The Reporting tabs with Call report open, showing the Incoming and Outgoing toggle."
+    },
+    {
+     "src": "shots/15-2.jpg",
+     "afterStep": 10,
+     "caption": "Marketplace Apps with the Search Apps box and filters on the left."
+    }
+   ],
+   "searchTerms": [
+    "view call report",
+    "see inbound and outbound calls",
+    "appointment report",
+    "facebook ads report",
+    "google ads report",
+    "local marketing audit",
+    "find uploaded images",
+    "media storage",
+    "manage google reviews",
+    "connect google business profile",
+    "app marketplace",
+    "install canva app",
+    "build a course",
+    "where are memberships"
+   ],
+   "status": "active",
+   "source": "GoHigh App Marketplace and Reporting Features.mp4"
+  }
+ ]
+}

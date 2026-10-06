@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style></head><body>
+<title>TSL Go High Level Training</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one centered column (max 1120px). Library = progress panel + video-style lesson cards; lesson = player, completion toggle, written SOP. */
+:root{
+  --bg:#ffffff; --surface:#f5f6f8; --line:#e2e4e9; --line-strong:#c9cdd5;
+  --fg:#15171c; --muted:#585d68; --faint:#878c97;
+  --accent:#1f5eff; --accent-hover:#174bd6; --accent-soft:#e8efff; --on-accent:#ffffff;
+  --done:#12805c; --done-soft:#e3f5ee;
+  --stage:#10131a; --stage-2:#1c2433; --stage-fg:#ffffff; --stage-muted:#a9b2c3;
+  --mark:#fff1a8; --focus:#1f5eff;
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121418; --surface:#1a1d23; --line:#2a2e36; --line-strong:#3a3f49;
+  --fg:#eceef2; --muted:#a6acb8; --faint:#7d8390;
+  --accent:#6f97ff; --accent-hover:#8daeff; --accent-soft:#1d2a4a; --on-accent:#0b1020;
+  --done:#4cc79a; --done-soft:#14302a;
+  --stage:#0b0d12; --stage-2:#1a2131; --stage-fg:#ffffff; --stage-muted:#a9b2c3;
+  --mark:#5a4d12; --focus:#8daeff; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121418; --surface:#1a1d23; --line:#2a2e36; --line-strong:#3a3f49;
+  --fg:#eceef2; --muted:#a6acb8; --faint:#7d8390;
+  --accent:#6f97ff; --accent-hover:#8daeff; --accent-soft:#1d2a4a; --on-accent:#0b1020;
+  --done:#4cc79a; --done-soft:#14302a;
+  --stage:#0b0d12; --stage-2:#1a2131; --stage-fg:#ffffff; --stage-muted:#a9b2c3;
+  --mark:#5a4d12; --focus:#8daeff; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px;padding-block:24px 56px}
+@media (max-width:600px){.wrap{padding-inline:16px}}
+h1,h2,h3,h4{text-wrap:balance;margin:0;line-height:1.2}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
+svg{flex:none}
+[hidden]{display:none!important}
+
+/* Header */
+.top{display:grid;gap:16px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.brandline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.top h1{font-size:28px;font-weight:700;letter-spacing:-.015em}
+.top h1 button{all:unset;cursor:pointer}
+.top p{margin:0;color:var(--muted);max-width:70ch}
+.search{position:relative}
+.search > svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--faint);pointer-events:none}
+.search input{width:100%;font:inherit;font-size:16px;padding:14px 76px 14px 44px;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--bg);color:var(--fg)}
+.search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.search input::placeholder{color:var(--faint)}
+.search input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:none;cursor:pointer;color:var(--muted);padding:6px 10px;border-radius:6px;font-size:13px}
+.clear:hover{background:var(--surface)}
+
+/* Progress */
+.progress{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+@media (max-width:640px){.progress{grid-template-columns:1fr}}
+.progress > div{min-width:0}
+.progress .label{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin-bottom:8px;flex-wrap:wrap}
+.progress .label b{font-weight:600}
+.progress .label span{color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar > i{display:block;height:100%;border-radius:99px;background:var(--done);transition:width .4s ease}
+.cta{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:14.5px;padding:11px 18px;border-radius:8px;transition:background .15s;text-align:left;max-width:100%}
+.cta:hover{background:var(--accent-hover)}
+.cta .sub{font-weight:400;opacity:.85}
+.progress.small{padding:10px 14px;grid-template-columns:auto minmax(0,1fr) auto;gap:14px}
+.progress.small .bar{height:6px}
+.progress.small .t{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Library */
+.section{padding-top:32px;display:grid;gap:14px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.section-head .h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2{font-size:19px;font-weight:700}
+.section-head .blurb{color:var(--muted);font-size:14px}
+.section-head .tally{font-size:13px;color:var(--faint);font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;text-align:left;cursor:pointer;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:0;overflow:hidden;min-width:0;transition:transform .15s ease,box-shadow .15s ease,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--line-strong);box-shadow:0 12px 28px -12px rgba(16,19,26,.35)}
+.thumb{position:relative;aspect-ratio:16/8.5;background:linear-gradient(135deg,var(--t1,#1c7ed6) 0%,var(--t2,#0f4f8f) 100%);color:#fff;overflow:hidden}
+.thumb .art{position:absolute;inset:14% 6% 10%;width:88%;height:76%;transition:transform .25s ease}
+.card:hover .thumb .art{transform:scale(1.04)}
+.thumb .no{position:absolute;left:14px;top:11px;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.85)}
+.thumb .dur{position:absolute;right:12px;bottom:12px;font-family:var(--mono);font-size:12px;font-weight:600;background:rgba(0,0,0,.45);padding:3px 8px;border-radius:6px}
+.play{position:relative;width:58px;height:58px;border-radius:50%;background:#fff;color:#10131a;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .15s ease,background .15s}
+.play svg{margin-left:3px}
+.thumb .play{position:absolute;left:12px;bottom:12px;width:40px;height:40px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.card:hover .thumb .play{transform:scale(1.12)}
+.badge{position:absolute;right:12px;top:10px;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;background:var(--done);color:#fff;padding:3px 9px 3px 7px;border-radius:99px}
+.card-body{display:flex;flex-direction:column;gap:10px;padding:16px 18px 18px;flex:1;min-width:0}
+.card h3{font-size:17.5px;font-weight:700;letter-spacing:-.005em}
+.learns{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13.5px;color:var(--muted)}
+.learns li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px;align-items:start}
+.learns li svg{margin-top:4px;color:var(--accent)}
+.learns li.more{display:block;color:var(--faint);padding-left:22px}
+.card .foot{margin-top:auto;padding-top:6px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.go{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--accent)}
+.go svg{transition:transform .15s}
+.card:hover .go svg{transform:translateX(3px)}
+.steps-count{font-size:12.5px;color:var(--faint)}
+.card.is-done .go{color:var(--done)}
+.hit{font-size:13px;color:var(--fg);background:var(--surface);border-radius:8px;padding:8px 10px}
+.empty{padding:40px 0;color:var(--muted)}
+
+/* Lesson */
+.crumbs{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:18px;flex-wrap:wrap}
+.back{border:0;background:none;cursor:pointer;color:var(--muted);padding:6px 0;font-size:14px;display:inline-flex;gap:6px;align-items:center}
+.back:hover{color:var(--fg)}
+.pager{display:flex;gap:8px}
+.pager button{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:13px;color:var(--muted)}
+.pager button:hover:not(:disabled){border-color:var(--fg);color:var(--fg)}
+.pager button:disabled{opacity:.4;cursor:default}
+.lesson-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 24px;padding-top:14px;flex-wrap:wrap}
+.lesson-head .txt{display:grid;gap:8px;min-width:0;flex:1 1 480px}
+.eyebrow{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--faint);letter-spacing:.04em;text-transform:uppercase}
+.lesson-head h2{font-size:30px;font-weight:700;letter-spacing:-.015em}
+.lesson-head p{margin:0;color:var(--muted);max-width:72ch;font-size:16px}
+.toggle{display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:1.5px solid var(--line-strong);background:var(--bg);border-radius:99px;padding:9px 18px 9px 10px;font-weight:600;font-size:14.5px;transition:all .15s;white-space:nowrap}
+.toggle .box{width:22px;height:22px;border-radius:50%;border:2px solid var(--line-strong);display:grid;place-items:center;color:transparent;transition:all .15s}
+.toggle:hover{border-color:var(--done)}
+.toggle:hover .box{border-color:var(--done)}
+.toggle[aria-pressed="true"]{background:var(--done-soft);border-color:var(--done);color:var(--done)}
+.toggle[aria-pressed="true"] .box{background:var(--done);border-color:var(--done);color:#fff}
+.toggle.nudge{animation:nudge 1.2s ease 2}
+@keyframes nudge{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 0 6px var(--done-soft)}}
+.media{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;padding-top:20px;align-items:start}
+@media (max-width:860px){.media{grid-template-columns:1fr}}
+.player{position:relative;border-radius:12px;overflow:hidden;background:#000;aspect-ratio:1112/720;max-width:100%}
+.player video{width:100%;height:100%;display:block;background:#000}
+.cover{position:absolute;inset:0;border:0;cursor:pointer;display:grid;place-items:center;align-content:center;gap:18px;padding:24px;text-align:center;background:linear-gradient(135deg,var(--t1) 0%,var(--t2) 100%);color:#fff}
+.cover .cover-art{position:absolute;inset:8% 10%;width:80%;height:84%;opacity:.28}
+.cover .play{width:82px;height:82px}
+.cover:hover .play{transform:scale(1.08)}
+.cover .ct{position:relative;display:grid;gap:6px}
+.cover .ct strong{font-size:22px;font-weight:700}
+.cover .ct span{color:rgba(255,255,255,.85);font-size:14px}
+.cover .ct strong{text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.ended{position:absolute;left:12px;right:12px;bottom:56px;display:flex;justify-content:center}
+.ended button{border:0;cursor:pointer;background:var(--done);color:#fff;font-weight:600;padding:10px 16px;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.learn{background:var(--surface);border-radius:12px;padding:16px 18px}
+.learn h3,.notes h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.learn ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14px}
+.learn li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px}
+.learn li svg{margin-top:4px;color:var(--accent)}
+.sop{padding-top:34px;display:grid;gap:26px;max-width:860px}
+.sop-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.sop-title h3{font-size:20px;font-weight:700}
+.sop-title span{font-size:13px;color:var(--faint)}
+.part h4{font-size:15.5px;font-weight:600;margin:0 0 10px}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+ol.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding:8px 10px;border-radius:8px;margin-inline:-10px}
+ol.steps li.flash{background:var(--mark)}
+ol.steps .n{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:1px;text-align:right}
+ol.steps li > div{min-width:0}
+strong.ui{font-weight:600;color:var(--fg)}
+figure{margin:8px 0 10px 0;display:grid;gap:6px}
+figure button{all:unset;cursor:zoom-in;display:block;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-width:100%}
+figure button:focus-visible{outline:2px solid var(--focus)}
+figure.big button{cursor:zoom-out}
+figure img{display:block;width:100%;max-width:640px}
+figure.big img{max-width:100%}
+figcaption{font-size:13px;color:var(--muted)}
+.notes{border:1px solid var(--line-strong);border-radius:var(--r);padding:14px 16px;max-width:860px;margin-top:26px}
+.notes ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.finish{margin-top:30px;max-width:860px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+.finish .q{font-weight:600}
+.finish .row{display:flex;gap:10px;flex-wrap:wrap}
+.foot-meta{padding-top:26px;display:grid;gap:10px;font-size:13px;color:var(--muted);max-width:860px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer;color:var(--muted)}
+.tags button:hover{border-color:var(--fg);color:var(--fg)}
+.src{font-family:var(--mono);font-size:12px;color:var(--faint)}
+.syncnote{font-size:12px;color:var(--faint)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brandline">
+      <h1><button type="button" id="home" aria-label="CRM Training Guide, show all lessons">CRM Training Guide</button></h1>
+    </div>
+    <p id="intro">Short video lessons with written steps for every part of the CRM. Watch them in order, or search for the task you need.</p>
+    <div class="search" role="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" autocomplete="off" placeholder="Search Training: try &quot;book an appointment&quot; or &quot;custom field&quot;" aria-label="Search Training">
+      <button class="clear" id="clear" type="button" hidden>Clear</button>
+    </div>
+  </header>
+  <main id="view" aria-live="polite"></main>
+</div>
+
+<script>
+(function(){
+  const LAYER = "crm"; // future: "tsl" or "client-<slug>" loads data/<layer>.json with no other code changes
+  const $ = s => document.querySelector(s);
+  const view = $("#view"), q = $("#q"), clearBtn = $("#clear");
+  let LIB = null, LESSONS = [], openSlug = null;
+
+  /* ---------- icons ---------- */
+  const I = (d, s=24) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const ICONS = {
+    1:'<path d="M12 2.5c3 2 5 5.8 5 9.8l-2 3.7H9l-2-3.7c0-4 2-7.8 5-9.8z"/><circle cx="12" cy="9.5" r="1.8"/><path d="M9 16l-2.5 4 3.5-1.2M15 16l2.5 4-3.5-1.2"/>',
+    2:'<rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/>',
+    3:'<path d="M4 5h12v8H9.5L5 16.5V13H4z"/><path d="M18.5 9H20v8h-1v3l-3.2-3H11v-2"/>',
+    4:'<rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M4 10h16M8.5 3v5M15.5 3v5"/><path d="M8 14h2M14 14h2M8 17h2"/>',
+    5:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.8 3-6 6.5-6s6.5 2.2 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.5 14.2c2.8.2 5 2.2 5 5.3"/>',
+    6:'<rect x="3.5" y="4" width="4.5" height="16" rx="1.2"/><rect x="10" y="4" width="4.5" height="10" rx="1.2"/><rect x="16.5" y="4" width="4.5" height="6.5" rx="1.2"/>',
+    7:'<rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19M6.5 15h4"/>',
+    8:'<path d="M11 3.5l1.9 4.6 4.6 1.9-4.6 1.9L11 16.5l-1.9-4.6-4.6-1.9 4.6-1.9z"/><path d="M18.5 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+    9:'<path d="M3 10v4h3.5l8.5 4.5v-13L6.5 10z"/><path d="M18 9a4.2 4.2 0 0 1 0 6"/>',
+    10:'<rect x="3.5" y="3.5" width="7" height="5" rx="1.2"/><rect x="13.5" y="15.5" width="7" height="5" rx="1.2"/><path d="M7 8.5V12h10v3.5"/><circle cx="17" cy="6" r="2.5"/>',
+    11:'<rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M2.5 9h19"/><circle cx="6" cy="6.8" r=".6"/><circle cx="8.5" cy="6.8" r=".6"/><path d="M6 13h7M6 16h4"/>',
+    12:'<circle cx="8.5" cy="8" r="3.2"/><path d="M2.5 19.5c0-3.4 2.7-5.5 6-5.5"/><rect x="13" y="12" width="8.5" height="8.5" rx="1.5"/><path d="M13 15h8.5M15.5 10.5v3M19 10.5v3"/>',
+    13:'<rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M4 10h16M8.5 3v5M15.5 3v5"/><path d="M12 12.5v6M9 15.5h6"/>',
+    14:'<rect x="3.5" y="4" width="17" height="4.5" rx="1.2"/><rect x="3.5" y="10.5" width="17" height="4.5" rx="1.2"/><path d="M3.5 19h9"/><path d="M6.5 6.2h4M6.5 12.7h6"/>',
+    15:'<path d="M4 20.5v-9M10 20.5V4M16 20.5v-6.5M3 20.5h18"/><circle cx="19.5" cy="6" r="2"/>'
+  };
+  const PLAY = '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>';
+  const CHECK = s => I('<path d="M5 12.5l4.5 4.5L19 7.5"/>', s);
+  const ARROW = I('<path d="M5 12h14M13 6l6 6-6 6"/>', 16);
+
+
+  /* ---------- thumbnail art: one simple illustration per lesson, white shapes on a colored tile ---------- */
+  const THEME = {1:["#4263eb","#2b3a9e"],2:["#1c7ed6","#0f4f8f"],3:["#1098ad","#0a5f6e"],4:["#2f9e6a","#1b6445"],5:["#7048e8","#43289b"],
+    6:["#d6336c","#8f1f47"],7:["#e8590c","#a33c06"],8:["#845ef7","#4f32a8"],9:["#e64980","#9c2453"],10:["#1971c2","#0d437a"],
+    11:["#0c8599","#075563"],12:["#3b5bdb","#24398f"],13:["#2b8a3e","#195527"],14:["#9c36b5","#5f1f70"],15:["#f08c00","#a35c00"]};
+  const R = (x,y,w,h,o,rx=3,extra="") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="#fff" fill-opacity="${o}" ${extra}/>`;
+  const C = (cx,cy,r,o) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#fff" fill-opacity="${o}"/>`;
+  const L = (d,o=.8,w=2.5) => `<path d="${d}" fill="none" stroke="#fff" stroke-opacity="${o}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  function calGrid(x,y,cols,rows,cw,ch,gap,hot){ let o=""; for(let r=0;r<rows;r++) for(let c=0;c<cols;c++){ const k=r*cols+c; o+=R(x+c*(cw+gap),y+r*(ch+gap),cw,ch,hot.includes(k)?.9:.18,1.5);} return o; }
+  const ART = {
+    1: () => R(40,12,120,72,.12,7)+R(52,22,46,5,.9,2.5)+R(52,33,96,6,.22,3)+R(52,33,60,6,.95,3)
+          +[46,58,70].map((y,i)=>C(57,y+2,4,i<2?.95:.3)+R(66,y,i===0?70:i===1?58:64,4,.45,2)).join(""),
+    2: () => R(40,10,56,42,.14,6)+`<circle cx="68" cy="31" r="12" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="6"/><circle cx="68" cy="31" r="12" fill="none" stroke="#fff" stroke-width="6" stroke-dasharray="52 76" transform="rotate(-90 68 31)"/>`
+          +R(102,10,58,42,.14,6)+[[110,18],[121,28],[132,12],[143,22]].map(([x,h])=>R(x,44-h,7,h,.9,1.5)).join("")
+          +R(40,58,120,28,.14,6)+L("M48 78 L66 70 L82 74 L100 64 L118 68 L136 60 L152 63",.95,2.5),
+    3: () => R(40,10,38,76,.14,6)+[18,32,46,60,74].map((y,i)=>C(48,y+3,3.5,i===0?.95:.45)+R(55,y+1,18,4,i===0?.9:.35,2)).join("")
+          +R(86,16,62,16,.92,8)+R(98,40,62,16,.35,8)+R(86,64,46,16,.92,8),
+    4: () => R(46,10,108,74,.12,7)+R(46,10,108,13,.3,7)+calGrid(54,29,7,4,10,9,4,[2,9,10,18,24]),
+    5: () => R(40,12,50,72,.16,7)+C(65,32,11,.95)+R(52,50,26,5,.9,2.5)+R(55,59,20,4,.45,2)+R(50,70,30,7,.35,3.5)
+          +[14,30,46,62].map((y,i)=>R(98,y,62,12,.16,4)+C(106,y+6,3.5,.85)+R(113,y+4,i%2?30:38,4,.6,2)).join(""),
+    6: () => [0,1,2,3].map(i=>{ const x=40+i*31, n=[3,2,2,1][i]; let o=R(x,10,27,76,.1,5)+R(x+4,15,14,4,.75,2); for(let k=0;k<n;k++) o+=R(x+3,24+k*19,21,15,k===0?.92:.45,3); return o; }).join(""),
+    7: () => R(98,10,54,76,.18,5)+[20,28,36,44].map((y,i)=>R(106,y,i===0?26:38,4,.55,2)).join("")+R(106,66,38,6,.85,2)
+          +R(44,26,84,52,.95,7)+`<rect x="44" y="36" width="84" height="9" fill="#000" fill-opacity=".28"/>`+`<rect x="54" y="53" width="16" height="11" rx="2" fill="#000" fill-opacity=".22"/>`+`<rect x="54" y="68" width="40" height="4" rx="2" fill="#000" fill-opacity=".22"/>`,
+    8: () => R(50,16,90,56,.14,14)+`<path d="M78 72 L72 84 L90 72z" fill="#fff" fill-opacity=".14"/>`
+          +`<path d="M95 24 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5z" fill="#fff"/>`+`<path d="M122 22 l2.4 5.6 5.6 2.4 -5.6 2.4 -2.4 5.6 -2.4 -5.6 -5.6 -2.4 5.6 -2.4z" fill="#fff" fill-opacity=".7"/>`
+          +`<path d="M70 52 l2 4.5 4.5 2 -4.5 2 -2 4.5 -2 -4.5 -4.5 -2 4.5 -2z" fill="#fff" fill-opacity=".5"/>`,
+    9: () => `<path d="M44 40 h12 l30 -16 v48 l-30 -16 h-12z" fill="#fff" fill-opacity=".95"/>`+R(50,56,8,14,.6,2)
+          +L("M94 38 a12 12 0 0 1 0 20",.75,3)+L("M101 31 a22 22 0 0 1 0 34",.45,3)
+          +R(116,16,20,20,.85,5)+R(140,16,20,20,.35,5)+R(116,40,20,20,.35,5)+R(140,40,20,20,.85,5)+R(116,64,44,14,.2,5),
+    10: () => L("M100 26 V38 M100 52 V60 H72 V66 M100 60 H128 V66",.7,2.5)+R(70,12,60,14,.95,4)+R(70,38,60,14,.45,4)+R(44,66,56,14,.9,4)+R(104,66,52,14,.45,4)+C(100,38,0,0),
+    11: () => R(40,10,120,76,.12,7)+R(40,10,120,12,.28,7)+C(48,16,2,.9)+C(55,16,2,.6)+C(62,16,2,.4)
+          +R(50,28,100,26,.26,4)+R(60,36,52,5,.95,2.5)+R(60,45,34,4,.55,2)+R(50,60,30,18,.2,3)+R(85,60,30,18,.2,3)+R(120,60,30,18,.2,3),
+    12: () => R(40,14,58,68,.16,7)+C(69,34,11,.95)+R(54,52,30,5,.9,2.5)+R(58,61,22,4,.45,2)+R(52,70,34,6,.3,3)
+          +L("M100 48 H110",.6,2)+R(112,24,48,48,.16,6)+R(112,24,48,10,.35,6)+calGrid(117,39,4,3,8,7,3,[1,5,10]),
+    13: () => R(48,14,96,70,.12,7)+R(48,14,96,13,.3,7)+calGrid(55,33,6,4,11,8,4,[3,8,14])+`<circle cx="146" cy="20" r="13" fill="#fff"/>`+`<path d="M146 13.5 V26.5 M139.5 20 H152.5" stroke="#000" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>`,
+    14: () => [12,36,60].map((y,i)=>R(50,y,i===1?30:24,4,.7,2)+R(50,y+8,100,13,.18,4,'stroke="#fff" stroke-opacity=".5" stroke-width="1.2"')+(i===1?L(`M138 ${y+12.5} l4 4 4 -4`,.9,2):R(56,y+12.5,i===0?44:30,4,.75,2))).join(""),
+    15: () => [0,1,2].map(c=>[0,1].map(r=>R(40+c*22,16+r*22,18,18,(c+r)%2?.35:.9,5)).join("")).join("")+R(40,62,62,18,.16,5)
+          +L("M112 84 H160 M112 84 V14",.5,2)+[[118,22],[130,38],[142,30],[154,54]].map(([x,h])=>R(x-4,82-h,9,h,.9,1.5)).join("")
+  };
+  const art = (n, cls="art") => `<svg class="${cls}" viewBox="0 0 200 96" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${(ART[n]||ART[2])()}</svg>`;
+  const tileStyle = n => { const t = THEME[n] || THEME[2]; return `--t1:${t[0]};--t2:${t[1]}`; };
+
+  /* ---------- helpers ---------- */
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong class="ui">$1</strong>');
+  const plain = s => String(s).replace(/\*\*/g, "");
+  const pad = n => String(n).padStart(2, "0");
+  const norm = s => plain(s).toLowerCase().replace(/&/g," and ").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
+  function highlight(text, terms){
+    let h = md(text);
+    if(!terms || !terms.length) return h;
+    const re = new RegExp("(" + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|") + ")", "gi");
+    return h.split(/(<[^>]+>)/).map(p => p.startsWith("<") ? p : p.replace(re, "<mark>$1</mark>")).join("");
+  }
+
+  /* ---------- progress store: per-viewer, synced to their Claude account when possible, else this browser ---------- */
+  const LS_KEY = "crm-training-progress-v1";
+  let progress = {};              // slug -> {done:boolean, at:number}
+  let dbRef = null, dbWritable = true;
+  const readLocal = () => { try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}")[LAYER] || {}; } catch(e){ return {}; } };
+  const writeLocal = () => { try { const all = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); all[LAYER] = progress; localStorage.setItem(LS_KEY, JSON.stringify(all)); } catch(e){} };
+  const merge = (a, b) => { const out = {...a}; for(const k in b){ if(!out[k] || (b[k].at||0) > (out[k].at||0)) out[k] = b[k]; } return out; };
+  const isDone = slug => !!(progress[slug] && progress[slug].done);
+  const doneCount = () => LESSONS.filter(l => isDone(l.slug)).length;
+  let writing = Promise.resolve();
+  function pushRemote(){
+    if(!dbRef || !dbWritable) return;
+    const body = {[LAYER]: progress, updatedAt: Date.now()};
+    writing = writing.then(() => dbRef.set(body)).catch(e => { if(e && e.code === "invalid_argument") dbWritable = false; });
+  }
+  function setDone(slug, done){
+    progress = {...progress, [slug]: {done, at: Date.now()}};
+    writeLocal(); pushRemote(); refresh();
+  }
+  async function connectStore(){
+    try{
+      if(!window.claude || !window.claude.use) return;
+      const [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
+      if(!db || !user) return;
+      const id = await user.id();
+      if(!id) return;
+      dbRef = db.doc("data/users/" + id + "/progress");
+      const snap = await dbRef.get();
+      const remote = (snap.exists && snap.data() && snap.data()[LAYER]) || {};
+      const merged = merge(remote, progress);
+      const changed = JSON.stringify(merged) !== JSON.stringify(remote);
+      progress = merged; writeLocal(); refresh();
+      if(changed && Object.keys(merged).length) pushRemote();
+    }catch(e){}
+  }
+
+  /* ---------- search ---------- */
+  function index(){
+    LESSONS.forEach(l => {
+      let n = 0; l._steps = [];
+      l.sop.forEach(sec => sec.steps.forEach(st => { n++; l._steps.push({n, text: st, norm: norm(st + " " + (sec.heading||""))}); }));
+      l._n = n;
+      l._title = norm(l.title); l._tags = norm(l.searchTerms.join(" | ")); l._desc = norm(l.description + " " + l.whatYouWillLearn.join(" ") + " " + l.category);
+    });
+  }
+  const STOP = ["the","to","a","an","in","of","my","how","do","i","and","for","on","is","can","what","where"];
+  function search(raw){
+    const terms = norm(raw).split(" ").filter(t => t.length > 1 && !STOP.includes(t));
+    if(!terms.length) return {terms:[], results:[]};
+    const results = [];
+    LESSONS.forEach(l => {
+      let score = 0, best = null, bestScore = 0;
+      terms.forEach(t => { if(l._title.includes(t)) score += 8; if(l._tags.includes(t)) score += 5; if(l._desc.includes(t)) score += 2; });
+      if(l._tags.includes(norm(raw))) score += 10;
+      l._steps.forEach(s => { const c = terms.filter(t => s.norm.includes(t)).length; if(c > bestScore){ bestScore = c; best = s; } });
+      score += bestScore * 3;
+      const covered = terms.filter(t => l._title.includes(t)||l._tags.includes(t)||l._desc.includes(t)||l._steps.some(s=>s.norm.includes(t))).length;
+      if(covered >= Math.max(1, Math.ceil(terms.length*0.6)) && score > 0) results.push({l, score: score + covered*4, step: bestScore ? best : null});
+    });
+    results.sort((a,b) => b.score - a.score || a.l.order - b.l.order);
+    return {terms, results};
+  }
+
+  /* ---------- views ---------- */
+  function nextUp(){ return LESSONS.find(l => !isDone(l.slug)); }
+
+  function progressPanel(){
+    const d = doneCount(), t = LESSONS.length, pct = t ? Math.round(d / t * 100) : 0, nx = nextUp();
+    const btn = nx
+      ? `<button class="cta" type="button" data-slug="${nx.slug}">${PLAY.replace('width="22" height="22"','width="15" height="15"')} ${d ? "Continue" : "Start"}: <span class="sub">Lesson ${pad(nx.order)}, ${esc(nx.title)}</span></button>`
+      : `<button class="cta" type="button" data-slug="${LESSONS[0].slug}">${CHECK(16)} All lessons complete. Review from the start</button>`;
+    return `<section class="progress" aria-label="Your progress"><div>
+        <div class="label"><b>Your progress</b><span>${d} of ${t} lessons completed &middot; ${pct}%</span></div>
+        <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${d}"><i style="width:${pct}%"></i></div>
+      </div>${btn}</section>`;
+  }
+
+  function card(l, hit, terms){
+    const done = isDone(l.slug), lw = l.whatYouWillLearn, show = lw.slice(0, 3);
+    return `<button class="card${done ? " is-done" : ""}" type="button" data-slug="${l.slug}"${hit ? ` data-step="${hit.n}"` : ""} aria-label="Watch lesson ${l.order}: ${esc(l.title)}${done ? ", completed" : ""}">
+      <div class="thumb" style="${tileStyle(l.order)}">
+        ${art(l.order)}
+        <span class="no">LESSON ${pad(l.order)}</span>
+        ${done ? `<span class="badge">${CHECK(13)} Completed</span>` : ""}
+        <span class="play">${PLAY.replace('width="22" height="22"','width="16" height="16"')}</span>
+        <span class="dur">${l.videoDuration}</span>
+      </div>
+      <div class="card-body">
+        <h3>${terms ? highlight(l.title, terms) : esc(l.title)}</h3>
+        ${hit ? `<div class="hit">Step ${hit.n}: ${highlight(hit.text, terms)}</div>`
+              : `<ul class="learns">${show.map(x => `<li>${CHECK(13)}<span>${esc(plain(x))}</span></li>`).join("")}${lw.length > 3 ? `<li class="more">+ ${lw.length - 3} more</li>` : ""}</ul>`}
+        <div class="foot"><span class="go">${done ? "Watch again" : "Watch lesson"} ${ARROW}</span><span class="steps-count">${l._n}-step guide</span></div>
+      </div>
+    </button>`;
+  }
+
+  function renderLibrary(){
+    openSlug = null;
+    const raw = q.value.trim();
+    clearBtn.hidden = !raw;
+    if(raw){
+      const {terms, results} = search(raw);
+      view.innerHTML = `<section class="section"><div class="section-head"><div class="h"><h2>Results</h2><span class="blurb">${results.length} lesson${results.length===1?"":"s"} for "${esc(raw)}"</span></div></div>
+        ${results.length ? `<div class="grid">${results.map(r => card(r.l, r.step, terms)).join("")}</div>`
+          : `<p class="empty">No lessons match that search. Try a shorter phrase, such as "calendar", "tag" or "pipeline".</p>`}</section>`;
+      return;
+    }
+    view.innerHTML = `<div style="padding-top:22px">${progressPanel()}</div>` + LIB.sections.map(sec => {
+      const ls = LESSONS.filter(l => l.category === sec.name);
+      if(!ls.length) return "";
+      const d = ls.filter(l => isDone(l.slug)).length;
+      return `<section class="section"><div class="section-head"><div class="h"><h2>${esc(sec.name)}</h2><span class="blurb">${esc(sec.blurb||"")}</span></div><span class="tally">${d} of ${ls.length} done</span></div>
+        <div class="grid">${ls.map(l => card(l)).join("")}</div></section>`;
+    }).join("");
+  }
+
+  function toggleBtn(l){
+    const done = isDone(l.slug);
+    return `<button class="toggle" type="button" data-toggle="${l.slug}" aria-pressed="${done}"><span class="box">${CHECK(14)}</span>${done ? "Completed" : "Mark as completed"}</button>`;
+  }
+
+  function renderLesson(slug, step){
+    const i = LESSONS.findIndex(l => l.slug === slug);
+    if(i < 0) return renderLibrary();
+    const l = LESSONS[i], prev = LESSONS[i-1], next = LESSONS[i+1];
+    openSlug = slug;
+    const d = doneCount(), t = LESSONS.length;
+    const shotsAt = {};
+    l.screenshots.forEach(s => (shotsAt[s.afterStep] = shotsAt[s.afterStep] || []).push(s));
+    let n = 0;
+    const parts = l.sop.map(sec => `<div class="part">${sec.heading ? `<h4>${esc(sec.heading)}</h4>` : ""}<ol class="steps">${
+      sec.steps.map(st => { n++; return `<li id="step-${n}"><span class="n">${n}.</span><div>${md(st)}${(shotsAt[n]||[]).map(s =>
+        `<figure><button type="button" aria-label="Enlarge screenshot"><img src="${s.src}" alt="${esc(s.caption)}" loading="lazy"></button><figcaption>${esc(s.caption)}</figcaption></figure>`).join("")}</div></li>`; }).join("")
+    }</ol></div>`).join("");
+    view.innerHTML = `
+      <nav class="crumbs"><button class="back" type="button" data-home>&larr; All lessons</button>
+        <div class="pager"><button type="button" ${prev ? `data-slug="${prev.slug}"` : "disabled"}>&larr; Previous</button><button type="button" ${next ? `data-slug="${next.slug}"` : "disabled"}>Next &rarr;</button></div></nav>
+      <div class="progress small" style="margin-top:12px" aria-label="Your progress"><span class="t">Your progress</span>
+        <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${d}"><i style="width:${t ? d/t*100 : 0}%"></i></div><span class="t">${d} of ${t}</span></div>
+      <article>
+        <div class="lesson-head"><div class="txt"><span class="eyebrow">Lesson ${pad(l.order)} &middot; ${esc(l.category)} &middot; ${l.videoDuration}</span>
+          <h2>${esc(l.title)}</h2><p>${esc(l.description)}</p></div>${toggleBtn(l)}</div>
+        <div class="media">
+          <div class="player">
+            <video id="vid" controls preload="none" playsinline src="${l.videoUrl}"></video>
+            <button class="cover" type="button" id="cover" aria-label="Play lesson video" style="${tileStyle(l.order)}">${art(l.order, "art cover-art")}
+              <span class="play">${PLAY.replace('width="22" height="22"','width="30" height="30"')}</span>
+              <span class="ct"><strong>${esc(l.title)}</strong><span>Play lesson &middot; ${l.videoDuration}</span></span>
+            </button>
+            <div class="ended" id="ended" hidden><button type="button" data-toggle-on="${l.slug}">${CHECK(15)} Finished? Mark as completed</button></div>
+          </div>
+          <aside class="learn"><h3>What you'll learn</h3><ul>${l.whatYouWillLearn.map(x => `<li>${CHECK(13)}<span>${md(x)}</span></li>`).join("")}</ul></aside>
+        </div>
+        <section class="sop"><div class="sop-title"><h3>Written guide</h3><span>${n} steps</span></div>${parts}</section>
+        ${l.importantNotes.length ? `<section class="notes"><h3>Important notes</h3><ul>${l.importantNotes.map(x => `<li>${md(x)}</li>`).join("")}</ul></section>` : ""}
+        <div class="finish"><span class="q">${isDone(l.slug) ? "You completed this lesson." : "Watched the video and read the steps?"}</span>
+          <div class="row">${toggleBtn(l)}${next ? `<button class="cta" type="button" data-slug="${next.slug}">Next: ${esc(next.title)} ${ARROW}</button>` : `<button class="cta" type="button" data-home>Back to all lessons</button>`}</div></div>
+        <footer class="foot-meta"><div class="tags" aria-label="Related searches">${l.searchTerms.map(x => `<button type="button" data-term="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+          <span class="src">Source: ${esc(l.source)}</span></footer>
+      </article>`;
+    const vid = $("#vid"), cover = $("#cover"), ended = $("#ended");
+    cover.addEventListener("click", () => { cover.hidden = true; vid.play().catch(() => {}); });
+    vid.addEventListener("play", () => { ended.hidden = true; });
+    vid.addEventListener("ended", () => {
+      if(!isDone(l.slug)){ ended.hidden = false; document.querySelectorAll(".toggle").forEach(b => b.classList.add("nudge")); }
+    });
+    if(step){
+      const el = document.getElementById("step-" + step);
+      if(el){ el.classList.add("flash"); el.scrollIntoView({block:"center"}); setTimeout(() => el.classList.remove("flash"), 2200); }
+    } else window.scrollTo(0,0);
+  }
+
+  // Update completion UI in place (keeps the video playing on the lesson page).
+  function refresh(){
+    if(!LESSONS.length) return;
+    if(!openSlug){ const y = window.scrollY; renderLibrary(); window.scrollTo(0, y); return; }
+    const l = LESSONS.find(x => x.slug === openSlug), done = isDone(openSlug), d = doneCount(), t = LESSONS.length;
+    document.querySelectorAll(".toggle").forEach(b => { b.setAttribute("aria-pressed", done); b.classList.remove("nudge"); b.lastChild.textContent = done ? "Completed" : "Mark as completed"; });
+    const q1 = document.querySelector(".finish .q"); if(q1) q1.textContent = done ? "You completed this lesson." : "Watched the video and read the steps?";
+    const sm = document.querySelector(".progress.small"); if(sm){ sm.querySelector(".bar > i").style.width = (d/t*100) + "%"; sm.querySelectorAll(".t")[1].textContent = d + " of " + t; }
+    const en = $("#ended"); if(en && done) en.hidden = true;
+  }
+
+  function go(slug, step){
+    try{ history.replaceState(null, "", slug ? "#" + slug : location.pathname + location.search); }catch(e){}
+    slug ? renderLesson(slug, step) : (renderLibrary(), window.scrollTo(0,0));
+  }
+
+  view.addEventListener("click", e => {
+    const t = e.target.closest("[data-slug],[data-home],[data-term],[data-toggle],[data-toggle-on],figure button");
+    if(!t) return;
+    if(t.matches("figure button")){ t.parentElement.classList.toggle("big"); return; }
+    if(t.dataset.toggle){ setDone(t.dataset.toggle, !isDone(t.dataset.toggle)); return; }
+    if(t.dataset.toggleOn){ setDone(t.dataset.toggleOn, true); return; }
+    if(t.dataset.term){ q.value = t.dataset.term; go(null); return; }
+    if(t.hasAttribute("data-home")){ q.value = ""; go(null); return; }
+    go(t.dataset.slug, t.dataset.step ? +t.dataset.step : 0);
+  });
+  $("#home").addEventListener("click", () => { q.value = ""; go(null); });
+  let timer;
+  q.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(renderLibrary, 90); });
+  q.addEventListener("keydown", e => { if(e.key === "Escape"){ q.value = ""; renderLibrary(); } });
+  clearBtn.addEventListener("click", () => { q.value = ""; renderLibrary(); q.focus(); });
+
+  progress = readLocal();
+  fetch("data/" + LAYER + ".json").then(r => { if(!r.ok) throw new Error(r.status); return r.json(); }).then(lib => {
+    LIB = lib;
+    LESSONS = lib.lessons.filter(l => l.status === "active").sort((a,b) => a.order - b.order);
+    index();
+    $("#intro").textContent = "Short video lessons with written steps for every part of the CRM. Watch them in order and mark each one complete, or search for the task you need.";
+    const h = (location.hash || "").slice(1);
+    h && LESSONS.some(l => l.slug === h) ? renderLesson(h) : renderLibrary();
+    connectStore();
+  }).catch(() => { view.innerHTML = '<p class="empty">The lesson library could not be loaded. Refresh the page to try again.</p>'; });
+})();
+</script>
+
+</body></html>
