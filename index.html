@@ -485,7 +485,7 @@ figcaption{font-size:13px;color:var(--muted)}
   clearBtn.addEventListener("click", () => { q.value = ""; renderLibrary(); q.focus(); });
 
   progress = readLocal();
-  fetch("data/" + LAYER + ".json").then(r => { if(!r.ok) throw new Error(r.status); return r.json(); }).then(lib => {
+  fetch(LAYER + ".json").then(r => { if(!r.ok) throw new Error(r.status); return r.json(); }).then(lib => {
     LIB = lib;
     LESSONS = lib.lessons.filter(l => l.status === "active").sort((a,b) => a.order - b.order);
     index();

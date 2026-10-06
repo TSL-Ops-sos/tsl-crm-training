@@ -24,7 +24,7 @@
    "category": "Core CRM",
    "order": 1,
    "description": "Use the Launchpad setup guide to see which core GoHighLevel features are set up in your account, which still need attention, and where to find built-in tutorials.",
-   "videoUrl": "videos/01.mp4",
+   "videoUrl": "01.mp4",
    "videoDuration": "1:23",
    "whatYouWillLearn": [
     "Open the Launchpad from the left sidebar",
@@ -62,7 +62,7 @@
    ],
    "screenshots": [
     {
-     "src": "shots/01-1.jpg",
+     "src": "01-1.jpg",
      "afterStep": 5,
      "caption": "Foundational setup tasks with completion percentages and an expanded task showing Watch the Tutorial."
     }
@@ -90,7 +90,7 @@
    "category": "Core CRM",
    "order": 2,
    "description": "Switch between dashboards, read the default GoHighLevel dashboard widgets, customize a dashboard and change the reporting date range.",
-   "videoUrl": "videos/02.mp4",
+   "videoUrl": "02.mp4",
    "videoDuration": "5:27",
    "whatYouWillLearn": [
     "Switch between the default dashboard and custom dashboards",
@@ -152,17 +152,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/02-1.jpg",
+     "src": "02-1.jpg",
      "afterStep": 2,
      "caption": "Dashboard selector open, showing the search box and the dashboards available under Shared with me."
     },
     {
-     "src": "shots/02-2.jpg",
+     "src": "02-2.jpg",
      "afterStep": 14,
      "caption": "Edit mode: the widget three-dot menu (Edit, Duplicate, Delete) and the Add new widget panel."
     },
     {
-     "src": "shots/02-3.jpg",
+     "src": "02-3.jpg",
      "afterStep": 18,
      "caption": "Date range picker with Select date range, From and To, and the Comparison date range options."
     }
@@ -193,7 +193,7 @@
    "category": "Core CRM",
    "order": 3,
    "description": "Learn the layout of the Conversations tab so you can check unread messages, find and organize conversations, view contact details alongside a thread, and know what each Conversations sub-tab is for.",
-   "videoUrl": "videos/03.mp4",
+   "videoUrl": "03.mp4",
    "videoDuration": "4:22",
    "whatYouWillLearn": [
     "The three panels of the Conversations view",
@@ -249,17 +249,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/03-1.jpg",
+     "src": "03-1.jpg",
      "afterStep": 1,
      "caption": "The Conversations view: inbox list with Unread, All, Recent, and Starred tabs on the left, the message panel in the center, and the contact details panel with section icons on the right."
     },
     {
-     "src": "shots/03-2.jpg",
+     "src": "03-2.jpg",
      "afterStep": 9,
      "caption": "The expanded inbox menu with My inbox (All, Assigned to me, Followed by me), Team inbox, Internal chat, Views, and the Search box."
     },
     {
-     "src": "shots/03-3.jpg",
+     "src": "03-3.jpg",
      "afterStep": 12,
      "caption": "The Snippets tab with the New Folder and New Snippet buttons."
     }
@@ -290,7 +290,7 @@
    "category": "Core CRM",
    "order": 4,
    "description": "Learn how to view booked appointments by calendar or user, book an appointment correctly from the Calendars tab, and find where to connect your personal calendar.",
-   "videoUrl": "videos/04.mp4",
+   "videoUrl": "04.mp4",
    "videoDuration": "4:47",
    "whatYouWillLearn": [
     "How to filter the calendar by calendar and by user to see who is booked",
@@ -344,17 +344,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/04-1.jpg",
+     "src": "04-1.jpg",
      "afterStep": 5,
      "caption": "The Book appointment window: Calendar, Appointment title, Team member, and Date & time with the account timezone and Default and Custom tabs."
     },
     {
-     "src": "shots/04-2.jpg",
+     "src": "04-2.jpg",
      "afterStep": 11,
      "caption": "After selecting a contact, the contact's local time appears under their name on the right."
     },
     {
-     "src": "shots/04-3.jpg",
+     "src": "04-3.jpg",
      "afterStep": 16,
      "caption": "Settings, My Profile, Calendar: the Connected calendars section with the Add new button."
     }
@@ -385,7 +385,7 @@
    "category": "Core CRM",
    "order": 5,
    "description": "Open a contact record and work it end to end: set ownership, review and update fields, manage Do Not Disturb, send messages, and log tasks, notes, and appointments from one screen.",
-   "videoUrl": "videos/05.mp4",
+   "videoUrl": "05.mp4",
    "videoDuration": "10:38",
    "whatYouWillLearn": [
     "Open a contact record and navigate its three panels",
@@ -460,17 +460,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/05-1.jpg",
+     "src": "05-1.jpg",
      "afterStep": 7,
      "caption": "The DND tab: check DND All Channels or individual channels such as Email or Text Messages."
     },
     {
-     "src": "shots/05-2.jpg",
+     "src": "05-2.jpg",
      "afterStep": 11,
      "caption": "The Actions tab with Opportunities, Workflows (Active and Past), and Client portal (Offers and Community groups) expanded."
     },
     {
-     "src": "shots/05-3.jpg",
+     "src": "05-3.jpg",
      "afterStep": 19,
      "caption": "The Add task panel opened from the Tasks icon in the right icon bar: Title, description, Due date and time, Assign to, then Create."
     }
@@ -502,7 +502,7 @@
    "category": "Core CRM",
    "order": 6,
    "description": "Work opportunities on the pipeline board: switch pipelines, move cards through stages, use card quick actions, and edit opportunity details such as stage, status, and value.",
-   "videoUrl": "videos/06.mp4",
+   "videoUrl": "06.mp4",
    "videoDuration": "4:56",
    "whatYouWillLearn": [
     "Open the Opportunities board and switch between pipelines",
@@ -562,17 +562,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/06-1.jpg",
+     "src": "06-1.jpg",
      "afterStep": 5,
      "caption": "While dragging a card, the LOST, ABANDONED, and Won drop zones appear along the bottom of the board."
     },
     {
-     "src": "shots/06-2.jpg",
+     "src": "06-2.jpg",
      "afterStep": 6,
      "caption": "Quick action icons on an opportunity card. Hover an icon to see its label, such as Add an appointment."
     },
     {
-     "src": "shots/06-3.jpg",
+     "src": "06-3.jpg",
      "afterStep": 8,
      "caption": "The opportunity window: Pipeline, Stage, Status, Value, Owner, Source, and the Update and delete buttons."
     }
@@ -602,7 +602,7 @@
    "category": "Core CRM",
    "order": 7,
    "description": "Find your way around the Payments area: connect a payment provider, locate invoices, documents, orders, and subscriptions, and understand how products and payment links fit together.",
-   "videoUrl": "videos/07.mp4",
+   "videoUrl": "07.mp4",
    "videoDuration": "1:43",
    "whatYouWillLearn": [
     "Connect a payment provider, accounting software, and payment permissions",
@@ -658,12 +658,12 @@
    ],
    "screenshots": [
     {
-     "src": "shots/07-1.jpg",
+     "src": "07-1.jpg",
      "afterStep": 2,
      "caption": "The Get started with payments panel: connect a payment provider, connect accounting, and control who can see payments."
     },
     {
-     "src": "shots/07-2.jpg",
+     "src": "07-2.jpg",
      "afterStep": 12,
      "caption": "The payment link editor. Choose the product under Product, set options on the left, and click Save."
     }
@@ -694,7 +694,7 @@
    "category": "Core CRM",
    "order": 8,
    "description": "Navigate the AI Agents area of GoHighLevel and understand what each tab is used for, from building managed agents to browsing prebuilt industry agents.",
-   "videoUrl": "videos/08.mp4",
+   "videoUrl": "08.mp4",
    "videoDuration": "1:15",
    "whatYouWillLearn": [
     "Open the AI Agents area from the left sidebar",
@@ -740,12 +740,12 @@
    "importantNotes": [],
    "screenshots": [
     {
-     "src": "shots/08-1.jpg",
+     "src": "08-1.jpg",
      "afterStep": 2,
      "caption": "The AI Agents tab bar, from Getting Started through Industry Agents"
     },
     {
-     "src": "shots/08-2.jpg",
+     "src": "08-2.jpg",
      "afterStep": 11,
      "caption": "Industry Agents: My agents at the top, Available agents with Use this agent below"
     }
@@ -774,7 +774,7 @@
    "category": "Core CRM",
    "order": 9,
    "description": "Find your way around the Marketing area of GoHighLevel, including social posting, email campaigns, snippets, countdown timers, trigger links, ads and prospecting.",
-   "videoUrl": "videos/09.mp4",
+   "videoUrl": "09.mp4",
    "videoDuration": "2:33",
    "whatYouWillLearn": [
     "Connect social accounts in the Social Planner",
@@ -826,17 +826,17 @@
    "importantNotes": [],
    "screenshots": [
     {
-     "src": "shots/09-1.jpg",
+     "src": "09-1.jpg",
      "afterStep": 2,
      "caption": "Social Planner with a + Connect button under each network"
     },
     {
-     "src": "shots/09-2.jpg",
+     "src": "09-2.jpg",
      "afterStep": 5,
      "caption": "Email Marketing Statistics with the Create campaign button and campaign filter"
     },
     {
-     "src": "shots/09-3.jpg",
+     "src": "09-3.jpg",
      "afterStep": 10,
      "caption": "Trigger Links page with the Add Link button"
     }
@@ -866,7 +866,7 @@
    "category": "Core CRM",
    "order": 10,
    "description": "Learn how GoHighLevel workflows are built from a trigger and actions, create a simple workflow that adds new contacts to a pipeline, and keep workflows organized in folders.",
-   "videoUrl": "videos/10.mp4",
+   "videoUrl": "10.mp4",
    "videoDuration": "3:05",
    "whatYouWillLearn": [
     "Open the Workflows list and start a new workflow",
@@ -921,17 +921,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/10-1.jpg",
+     "src": "10-1.jpg",
      "afterStep": 7,
      "caption": "Contact created trigger selected, with the Save trigger button"
     },
     {
-     "src": "shots/10-2.jpg",
+     "src": "10-2.jpg",
      "afterStep": 12,
      "caption": "Opportunity action fields: pipeline, stage, value and status"
     },
     {
-     "src": "shots/10-3.jpg",
+     "src": "10-3.jpg",
      "afterStep": 17,
      "caption": "Selected workflows and the Move to folder window with Move Here"
     }
@@ -960,7 +960,7 @@
    "category": "Core CRM",
    "order": 11,
    "description": "Find your way around the Sites area of GoHighLevel, understand what each tab is used for, and start a new funnel from scratch, with AI, or from a template.",
-   "videoUrl": "videos/11.mp4",
+   "videoUrl": "11.mp4",
    "videoDuration": "1:42",
    "whatYouWillLearn": [
     "Open the Sites area and move between its tabs",
@@ -1003,12 +1003,12 @@
    "importantNotes": [],
    "screenshots": [
     {
-     "src": "shots/11-1.jpg",
+     "src": "11-1.jpg",
      "afterStep": 2,
      "caption": "The Sites tab bar, with the Client Portal menu open showing Dashboard, Settings and Branded Mobile App."
     },
     {
-     "src": "shots/11-2.jpg",
+     "src": "11-2.jpg",
      "afterStep": 13,
      "caption": "The Create new funnel window: start From blank, Build with AI, or From templates, then click Continue."
     }
@@ -1038,7 +1038,7 @@
    "category": "Settings & Configuration",
    "order": 12,
    "description": "Update your user profile, connect a third-party calendar, set your weekly availability, and configure notifications and your password from My Profile.",
-   "videoUrl": "videos/12.mp4",
+   "videoUrl": "12.mp4",
    "videoDuration": "0:55",
    "whatYouWillLearn": [
     "Open My Profile from Settings",
@@ -1093,12 +1093,12 @@
    ],
    "screenshots": [
     {
-     "src": "shots/12-1.jpg",
+     "src": "12-1.jpg",
      "afterStep": 7,
      "caption": "My Profile > Calendar: the Add new button under Connected calendars and the Additional calendar settings."
     },
     {
-     "src": "shots/12-2.jpg",
+     "src": "12-2.jpg",
      "afterStep": 10,
      "caption": "Weekly hours with Start time and End time per day, and the Add date specific hours button."
     }
@@ -1129,7 +1129,7 @@
    "category": "Settings & Configuration",
    "order": 13,
    "description": "Create a new booking calendar in Settings and share its booking link, and know where the other Business Services settings (email, phone, WhatsApp) live.",
-   "videoUrl": "videos/13.mp4",
+   "videoUrl": "13.mp4",
    "videoDuration": "1:27",
    "whatYouWillLearn": [
     "Open calendar settings from Business Services",
@@ -1176,17 +1176,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/13-1.jpg",
+     "src": "13-1.jpg",
      "afterStep": 3,
      "caption": "Choose calendar type: Personal booking, Round robin, Class booking, or Collective booking."
     },
     {
-     "src": "shots/13-2.jpg",
+     "src": "13-2.jpg",
      "afterStep": 8,
      "caption": "The New calendar window with name, team member, Custom URL, meeting duration, availability, and Advanced settings."
     },
     {
-     "src": "shots/13-3.jpg",
+     "src": "13-3.jpg",
      "afterStep": 11,
      "caption": "Share calendar: copy the Scheduling link or the Permanent link."
     }
@@ -1217,7 +1217,7 @@
    "category": "Settings & Configuration",
    "order": 14,
    "description": "Create custom fields to store data GoHighLevel does not track by default, and create custom values that insert saved text into messages and emails.",
-   "videoUrl": "videos/14.mp4",
+   "videoUrl": "14.mp4",
    "videoDuration": "2:33",
    "whatYouWillLearn": [
     "Open the Custom Fields and Custom Values pages in Settings",
@@ -1256,17 +1256,17 @@
    ],
    "screenshots": [
     {
-     "src": "shots/14-1.jpg",
+     "src": "14-1.jpg",
      "afterStep": 4,
      "caption": "Add to object options: Contact, Opportunity and Business."
     },
     {
-     "src": "shots/14-2.jpg",
+     "src": "14-2.jpg",
      "afterStep": 7,
      "caption": "A dropdown field with its name, auto-generated key, two options and the live preview. Object and folder still need to be selected before Create custom field is enabled."
     },
     {
-     "src": "shots/14-3.jpg",
+     "src": "14-3.jpg",
      "afterStep": 11,
      "caption": "The Add custom value window with Name, Value and Folder."
     }
@@ -1295,7 +1295,7 @@
    "category": "Additional Tools",
    "order": 15,
    "description": "Get oriented with the remaining sidebar tools: Memberships, Media Storage, Reputation, Reporting and the App Marketplace, and know what each is used for.",
-   "videoUrl": "videos/15.mp4",
+   "videoUrl": "15.mp4",
    "videoDuration": "2:20",
    "whatYouWillLearn": [
     "Where courses and communities live under Memberships",
@@ -1336,12 +1336,12 @@
    "importantNotes": [],
    "screenshots": [
     {
-     "src": "shots/15-1.jpg",
+     "src": "15-1.jpg",
      "afterStep": 6,
      "caption": "The Reporting tabs with Call report open, showing the Incoming and Outgoing toggle."
     },
     {
-     "src": "shots/15-2.jpg",
+     "src": "15-2.jpg",
      "afterStep": 10,
      "caption": "Marketplace Apps with the Search Apps box and filters on the left."
     }
